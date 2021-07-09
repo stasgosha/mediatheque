@@ -4,20 +4,24 @@
 @import '_fonts.scss'; // Reset
 $font1: 'OE August Pro';
 $orange: #DF561B;
-$blue: #3A59B6;
+$blue: #0348F4;
+$turquoise: #00B0CD;
 $green: #A1D39B;
-$yellow: #F9DA58;
-$main_color: #000;
+$yellow: #FFC400;
+$main_color: #444;
 $main_bg: #fff;
 $blue_bg: #074D5F;
-$light_blue: #AFDFDB;
-$light_blue2: #D1E7F7;
+$light_blue: #E6EDFE;
+$light_blue2: #C0D3FF;
 $pink: #FDC4C0;
-$red: #E1362F;
+$red: #E73B47;
 $dark_green: #003F31;
-$dark_gray: #333;
+$dark_gray: #222;
 $dark_purple: #8331F9;
 $light_purple: #D6B6FF;
+
+$text-color: #444;
+$text-dark: #222;
 
 html {
     scroll-behavior: smooth;
