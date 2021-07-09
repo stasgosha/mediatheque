@@ -7,7 +7,7 @@ function js() {
 	return gulp
 		.src('assets/js/**/*.js')
 		.pipe(concat('assets.min.js'))
-		.pipe(uglify())
+		// .pipe(uglify())
 		.pipe(gulp.dest('build/js'));
 }
 

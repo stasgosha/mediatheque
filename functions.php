@@ -87,7 +87,7 @@ add_action( 'admin_enqueue_scripts', 'ystheme_enqueue_assets', 100 );
 function ystheme_scripts_and_styles() {
 	wp_enqueue_style( 'main-style', THEME_URI . '/build/css/main-style.css?v=5', array(), THEME_VER );
 	wp_enqueue_style( 'responsive', THEME_URI . '/build/css/responsive.css?v=5', array(), THEME_VER );
-	wp_enqueue_style( 'dark-mode', THEME_URI . '/build/css/dark-mode.css', array(), THEME_VER );
+	// wp_enqueue_style( 'dark-mode', THEME_URI . '/build/css/dark-mode.css', array(), THEME_VER );
 
 	if ( is_page_template( 'views/tpl-event-tours.php' ) ) {
 
