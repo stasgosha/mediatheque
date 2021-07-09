@@ -1,0 +1,324 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-15 15:46+0000\n"
+"PO-Revision-Date: 2020-10-15 15:46+0000\n"
+"Last-Translator: Yuval Sabar\n"
+"Language-Team: עִבְרִית\n"
+"Language: he_IL\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.4.3; wp-5.5.1"
+
+#: 404.php:8 classes/class-h.php:130
+msgid "404 - Page Not Found"
+msgstr "404 - הדף אינו נמצא"
+
+#: 404.php:12 index.php:12
+msgid "Back to Homepage"
+msgstr "חזור לדף הבית"
+
+#: archive.php:12 category.php:12
+msgid "Sorry, no posts found."
+msgstr "מצטערים, לא נמצאו פוסטים."
+
+#: functions.php:83
+msgid "Featured Image"
+msgstr "תמונה ראשית"
+
+#: functions.php:103
+msgid "Main Menu"
+msgstr "תפריט ראשי"
+
+#: functions.php:104
+msgid "Main Menu - Mobile"
+msgstr "תפריט ראשי - מובייל"
+
+#: functions.php:117 functions.php:118 functions.php:135
+msgid "Theme Options"
+msgstr "אפשרויות תבנית"
+
+#: functions.php:358
+msgid "Incorrect username or password"
+msgstr "שם המשתמש או הסיסמה אינם נכונים"
+
+#: functions.php:363
+msgid "Login Completed"
+msgstr "ההתחברות הושלמה בהצלחה"
+
+#: index.php:8
+msgid "Index Page"
+msgstr "אינדקס"
+
+#: search.php:14
+#, php-format
+msgid "Found %1$s items with the term %2$s:"
+msgstr ""
+"נמצאו %1$s פריטים עם המונח %2$s:\n"
+
+#: search.php:16
+#, php-format
+msgid "No results found for the term %1$s."
+msgstr "לא נמצאו תוצאות חיפוש למונח %1$s."
+
+#: search.php:39
+msgid " Read More..."
+msgstr "קרא עוד..."
+
+#: searchform.php:6
+msgid "Toggle Search Box"
+msgstr "פתח\\סגור תיבת חיפוש"
+
+#: searchform.php:11 searchform.php:13 searchform.php:13
+msgid "Search"
+msgstr "חפש"
+
+#: admin/block-types.php:6
+msgid "Title"
+msgstr "כותרת"
+
+#: admin/block-types.php:17
+msgid "Editor"
+msgstr "עורך תוכן"
+
+#: admin/block-types.php:28
+msgid "Shortcode"
+msgstr "שורטקוד"
+
+#: admin/block-types.php:39
+msgid "Accordion"
+msgstr "אקורדיון"
+
+#: admin/block-types.php:50
+msgid "Contact Form"
+msgstr "טופס צור קשר"
+
+#: admin/block-types.php:61
+msgid "Home - Hero"
+msgstr "דף הבית - סליידר עליון"
+
+#: admin/block-types.php:72
+msgid "Quote"
+msgstr "ציטוט"
+
+#: admin/block-types.php:83
+msgid "Images Slider"
+msgstr "סליידר תמונות"
+
+#: admin/block-types.php:94
+msgid "Posts Slider"
+msgstr "סליידר פוסטים"
+
+#: admin/block-types.php:105
+msgid "Testimonials Slider"
+msgstr "סליידר ממליצים"
+
+#: admin/block-types.php:116
+msgid "Thumbnails Slider"
+msgstr "סליידר תמונות מוקטנות"
+
+#: admin/block-types.php:127
+msgid "Spacer"
+msgstr "ריווח"
+
+#: admin/block-types.php:138
+msgid "Strong Text"
+msgstr "טקסט מודגש"
+
+#: admin/block-types.php:149
+msgid "Tabs"
+msgstr "טאבים"
+
+#: admin/block-types.php:160
+msgid "Embed"
+msgstr "הטמעה"
+
+#: admin/block-types.php:171
+msgid "Video Lightbox"
+msgstr "לייטבוקס וידיאו"
+
+#: admin/block-types.php:182
+msgid "Image"
+msgstr "תמונה"
+
+#: admin/block-types.php:193
+msgid "Contact"
+msgstr "צור קשר"
+
+#: admin/block-types.php:214
+msgid "Custom Blocks"
+msgstr "בלוקים מותאמים אישית"
+
+#: admin/post-types.php:12 admin/post-types.php:14 admin/post-types.php:15
+msgid "Testimonials"
+msgstr "המלצות"
+
+#: admin/post-types.php:13 admin/post-types.php:19 admin/post-types.php:20
+msgid "Testimonial"
+msgstr "המלצה"
+
+#: admin/post-types.php:32 admin/post-types.php:34 admin/post-types.php:35
+msgid "Products"
+msgstr "מוצרים"
+
+#: admin/post-types.php:33 admin/post-types.php:39 admin/post-types.php:40
+msgid "Product"
+msgstr "מוצר"
+
+#: admin/post-types.php:72 admin/post-types.php:74
+msgid "Testimonials Categories"
+msgstr "קטגוריות ממליצים"
+
+#: admin/post-types.php:73
+msgid "Testimonial Category"
+msgstr "קטגוריית ממליץ"
+
+#: admin/post-types.php:92 admin/post-types.php:94
+msgid "Products Categories"
+msgstr "קטגוריות מוצרים"
+
+#: admin/post-types.php:93
+msgid "Product Category"
+msgstr "קטגוריית מוצר"
+
+#: classes/class-h.php:60
+msgid ""
+"Please add thumbnail or \"No Thumbnail Image\" if you have no thumbnail (see "
+"theme options)"
+msgstr "הוסף תמונת ברירת מחדל לפוסטים ללא תמונה (ר' אפשרויות תבנית)"
+
+#: classes/class-h.php:128
+msgid "Search Results"
+msgstr "תוצאות חיפוש"
+
+#: classes/class-h.php:534
+msgid "Load More"
+msgstr "טען עוד"
+
+#: classes/class-h.php:648
+msgid "Edit post"
+msgstr "ערוך פוסט"
+
+#: classes/class-h.php:902
+#, php-format
+msgid "Link to %s "
+msgstr "קישור אל %s "
+
+#: classes/class-h.php:904
+msgid "Share by Email"
+msgstr "שתף בדוא\"ל"
+
+#: classes/class-h.php:911
+msgid "Share on Facebook"
+msgstr "שתף בפייסבוק"
+
+#: classes/class-h.php:918
+msgid "Share on Twitter"
+msgstr "שתף בטוויטר"
+
+#: classes/class-h.php:925
+msgid "Share on LinkedIn"
+msgstr "שתף בלינקדאין"
+
+#: classes/class-h.php:932
+msgid "Share on Pinterest"
+msgstr "שתף בפינטרסט"
+
+#: classes/class-h.php:939
+msgid "Share on WhatsApp"
+msgstr "שתף בוואטסאפ"
+
+#: classes/class-mobile-menu-walker.php:30
+msgid "Toggle Sub-Menu"
+msgstr "פתח תפריט משנה"
+
+#: partials/blocks/block-slider-testimonials.php:3
+msgctxt "Block testimonials title"
+msgid "Testimonials"
+msgstr "המלצות"
+
+#: partials/footer/bottom-strip.php:4
+msgid "Call Us"
+msgstr "חייגו אלינו"
+
+#: partials/footer/bottom-strip.php:8
+msgid "Contact Us"
+msgstr "צרו קשר"
+
+#: partials/footer/bottom-strip.php:12 partials/header/mobile-navigation.php:17
+#: partials/header/mobile-navigation.php:17
+msgid "Toggle Main Menu"
+msgstr "פתח\\סגור תפריט ראשי"
+
+#: partials/footer/scroll-to-top.php:1
+msgid "Scroll to Top"
+msgstr "גלול למעלה"
+
+#: partials/global/form-login.php:2
+msgid "Username"
+msgstr "שם משתמש"
+
+#: partials/global/form-login.php:3 partials/global/form-register.php:6
+msgid "Password"
+msgstr "סיסמה"
+
+#: partials/global/form-login.php:4
+msgid "Login"
+msgstr "התחבר"
+
+#: partials/global/form-login.php:8
+msgid "Remember me"
+msgstr "זכור אותי"
+
+#: partials/global/form-login.php:12
+msgid "Forgot password?"
+msgstr "שכחת סיסמה?"
+
+#: partials/global/form-register.php:3
+msgid "First Name"
+msgstr "שם פרטי"
+
+#: partials/global/form-register.php:4
+msgid "Last Name"
+msgstr "שם משפחה"
+
+#: partials/global/form-register.php:5
+msgid "Email"
+msgstr "דואר אלקטרוני"
+
+#: partials/global/form-register.php:7
+msgid "Repeat Password"
+msgstr "אשר סיסמה"
+
+#: partials/global/form-register.php:8
+msgid "Register"
+msgstr "הרשמה"
+
+#: partials/header/header-contact-form.php:3
+msgctxt "Toggle contact form button at the header"
+msgid "Contact Us"
+msgstr "צרו אתנו קשר"
+
+#: partials/header/skiplinks.php:2
+msgid "Skip to Main Menu"
+msgstr "דלג לתפריט ראשי"
+
+#: partials/header/skiplinks.php:3
+msgid "Skip to Main Content"
+msgstr "דלג לתוכן מרכזי"
+
+#: partials/header/skiplinks.php:4
+msgid "Skip to Footer"
+msgstr "דלג לפוטר"
+
+#. Name of the theme
+msgid "Starter"
+msgstr "סטרטר"
+
+#. Author of the theme
+msgid "Anonymous"
+msgstr "אנונימי"

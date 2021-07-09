@@ -1,0 +1,13 @@
+.acf-accordion .acf-accordion-title svg.acf-accordion-icon {
+	right: auto;
+	left: 10px;
+}
+.acf-field[data-name='class'] input[type='text'],
+.acf-field[data-name='id'] input[type='text'],
+.acf-field[data-name='margin'] input[type='text'],
+.acf-field[data-name='margin_mobile'] input[type='text'],
+.acf-field[data-name='padding'] input[type='text'],
+.acf-field[data-name='padding_mobile'] input[type='text'],
+.acf-field[data-name='width'] input[type='text'] {
+	direction: ltr;
+}

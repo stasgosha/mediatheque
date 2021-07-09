@@ -1,0 +1,83 @@
+{
+    "key": "group_609135c929c9e",
+    "title": "Single News",
+    "fields": [
+        {
+            "key": "field_609135ee05cdc",
+            "label": "טקסט",
+            "name": "news_text",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": 80,
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_6091361105cdd",
+            "label": "תאריך עדכון",
+            "name": "start_date",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d.m.Y",
+            "return_format": "d.m.Y",
+            "first_day": 0
+        },
+        {
+            "key": "field_6091369405cde",
+            "label": "תאריך סיום",
+            "name": "end_date",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d\/m\/Y",
+            "return_format": "d\/m\/Y",
+            "first_day": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "mt_news"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "page_attributes",
+        "featured_image",
+        "categories"
+    ],
+    "active": true,
+    "description": "",
+    "modified": 1622118091
+}

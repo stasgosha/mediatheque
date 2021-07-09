@@ -1,0 +1,214 @@
+:root {
+  --bgColor: #fff;
+  --pink: #FDC4C0;
+  --fontColor: #333333;
+  --white: #fff;
+  --whiteBtn: #fff;
+  --black: #222;
+  --gray: #eee;
+  --text: #444;
+  --blue: #3A59B6;
+  --blueBtn: #3A59B6;
+  --lightGray: #CDDBDF;
+  --lightPurple: #D6B6FF;
+  --purple: #8331F9;
+  --lightBlue: #D1E7F7;
+  --lightBlueBg: #D1E7F7;
+  --darkBlue: #074D5F;
+  --darkBlue2: #074D5F;
+  --darkBlueBg: #074D5F;
+  --lightGreen: #A1D39B;
+  --darkGreen: #003F31;
+  --homeTitleColor: #fff;
+}
+
+
+.light-theme {
+  --bgColor: var(---bgColor);
+  --fontColor: var(--text);
+}
+
+.dark-theme {
+  --whiteBtn: var(--darkBlue2);
+  --bgColor: var( --black );
+  --text:  var(--white);
+  --gray:  var(--black);
+  --fontColor: var(--white);
+  --blue: var(--pink);
+  --darkBlue: var(--pink);
+  --darkGreen: var(--white);
+  --homeTitleColor: var(--pink);
+  --lightBlueBg: var(--pink);
+  --darkBlueBg: var(--black);
+}
+
+.hover-flip-item span:after, .hover-flip-item span:before,.hover-flip-item-wrapper .icon{
+    color: var(--whiteBtn);
+}
+
+.site-header, .site-footer, .main-navigation-wrap .main-navigation .menu>li>ul.sub-menu, .site-header .mobile-menu-wrap{
+    background-color: var( --darkBlueBg);
+}
+
+h1,h2,h3,h4,h5,h6, p,
+.block.block-iframe-banner .entry-title,
+.block.block-iframe-banner .entry-text,
+.mag-section .entry-text,
+.contact-main-wrap ul{
+    color:  var(--fontColor);
+}
+
+.title-wrap .entry-title,
+.qa-wrap .entry-title
+{
+    color: var(--darkBlue2);
+}
+
+.block-activities-grid .entry-title,
+.entry-details,
+.related-articles .title-wrap .entry-title,
+.single-article-wrap.content-wrap h1.entry-title,
+.content-wrap strong,
+.content-wrap b,
+.content-wrap h2, .content-wrap h3, .content-wrap h4, .content-wrap h4, .content-wrap h5, .content-wrap h6,
+.upcoming-section .title-wrap .entry-title,
+.button-next,
+.button-prev,
+.contact-main-wrap .entry-text a,
+.contact-main-wrap .entry-subtitle,
+.contact-main-wrap .entry-form-title,
+.contact-main-wrap .entry-title,
+.page-template-tpl-event-tours .calendar-wrap ul li span.text,
+.page-template-tpl-event-tours .events-results .entry-result .no-posts,
+.page-template-tpl-event-tours .calendar-wrap ul li a>span.num,
+.page-template-tpl-event-tours .calendar-wrap button,
+.page-template-tpl-event-tours .select-wrap .selectize-control.single .selectize-input,
+.page-template-tpl-event-tours .events-results .entry-result .entry-day-title,
+.block.block-content-image .icon-link
+{
+    color: var(--darkBlue);
+
+}
+
+.icon-link .icon{
+        background-color: var(--pink);
+        color: var(--darkBlue2);
+}
+
+.related-articles .icon-link .icon{
+    color: var(--purple);
+    background-color: var(--lightPurple);
+}
+.entry-activity .entry-content,
+ .entry-activity .entry-title,
+ .related-section .title-wrap .entry-title
+{
+    color: var(--darkGreen);
+}
+
+.entry-activity .entry-date::after{
+    background-color: var(--darkGreen);
+}
+
+
+.home .featured-section .entry-activity .entry-date::after,
+.archive .entry-activity .entry-date::after{
+    background-color: var(--blue);
+}
+.home .featured-section .title-wrap .entry-title,
+.home .featured-section .entry-activity .entry-content,
+.home .featured-section .entry-activity .entry-title,
+.archive .entry-activity .entry-content,
+.archive .entry-activity .entry-title
+{
+    color: var(--blue);
+}
+
+.home .featured-section .entry-activity .icon-hover,
+.archive .entry-activity .icon-hover
+{
+    background-color: var(--lightBlueBg);
+    color: var(--blueBtn);
+}
+.entry-activity .entry-subtitle,
+.home .featured-section .entry-activity .entry-subtitle,
+.breadcrumbs-wrap .breadcrumbs *
+{
+    color: var(--text);
+}
+
+.content-wrap ul li{
+    color: var(--text);
+}
+
+.swiper-pagination-bullets .swiper-pagination-bullet,
+.hover-flip-item-wrapper{
+    background-color: var(--darkBlue);
+}
+
+
+
+.selectize-control.single .selectize-input,
+.search-header-wrap form input,
+.side-menu-wrap .buy-now-date-picker,
+.selectize-dropdown,
+form input[type="text"], form input[type="tel"], form input[type="email"], form textarea
+{
+    border: 1px solid var( --lightGray);
+    color: var(--darkBlue);
+}
+
+.buy-now-date-picker::placeholder,
+.selectize-control.single .selectize-input input::placeholder, .date-picker-wrap:after,
+form input[type="text"]::placeholder, form input[type="tel"]::placeholder, form input[type="email"]::placeholder, form textarea::placeholder
+{
+    color: var(--darkBlue);
+
+}
+
+
+*::placeholder, .contact-main-wrap [type='checkbox']+.wpcf7-list-item-label:before{
+    color:var( --darkBlue);
+    border-color: var( --darkBlue);
+}
+.home .banner-section .entry-title, .home .title-wrap .entry-title,
+.header-image .header-image-content .entry-title,
+{
+    color: var( --homeTitleColor);
+}
+
+body,
+.header-search,
+.header-search form.search .search-input,
+.side-menu-wrap{
+    background-color: var(--bgColor);
+}
+
+.slider-section .bg-img svg path, .single-mt_event .header-image .bg-bottom-img svg path, .single-article-wrap .col-content .bg-img svg path{
+    fill:  var(--bgColor);
+}
+
+.toggle-white-bg{
+    background-color: var(--bgColor);
+
+}
+
+.thumbs-slider .swiper-slide.swiper-slide-active{
+    border: 1px solid var(--darkBlue);
+}
+
+.qa-wrap .entry-body p, .images-slider .button-next, .images-slider .button-prev, .related-articles .entry-article .icon-link{
+    color: var(--darkBlue2);
+}
+
+
+@media only screen and (max-width:992px) {
+
+    .related-articles .title-wrap .entry-title, .related-articles .entry-article .entry-title{
+        color: var(--darkBlue2);
+    }
+.related-articles .entry-article .icon-link .icon{
+    background-color: var(--darkBlue2);
+    color: var(--white);
+}
+}
