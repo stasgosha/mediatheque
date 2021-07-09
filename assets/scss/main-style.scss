@@ -361,9 +361,9 @@ button {
 
 .news-bar-wrap {
     width: 100%;
-    height: 41px;
-    color: $blue_bg;
-    background-color: $light_blue;
+    height: 73px;
+    color: $text-dark;
+    background: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -390,7 +390,9 @@ button {
             height: 100%;
             display: inline-flex !important;
             align-items: center;
-            font-size: 18px;
+            font-size: 21px;
+            font-weight: 400;
+            color: $text-dark;
 
             span {
                 &.date {
@@ -2524,6 +2526,7 @@ body.menu-open {
     @include transition(0.6s);
     transform: translateY(0);
     z-index: 99;
+    background: #fff;
 
     &.is-hide {
         transform: translateY(-100%);
@@ -2626,16 +2629,17 @@ body.menu-open {
         }
 
         .menu {
-            color: $main_bg;
+            color: #000;
 
             > li {
                 animation: fadeIn 0.7s ease-in-out both;
 
                 > a {
-                    font-size: 22px;
+                    font-size: 24px;
                     font-weight: bold;
                     line-height: 50px;
-                    @include transition(0.5s);
+                    color: inherit;
+                    transition: all .5s;
                 }
 
                 &.menu-item-has-children {
@@ -2732,7 +2736,7 @@ body.menu-open {
                 font-size: 18px;
                 text-transform: uppercase;
                 line-height: 16px;
-                color: $main_bg;
+                color: #000;
                 font-family: 'The Mix';
                 font-weight: 600;
                 @include transition(0.7s);
@@ -2838,10 +2842,10 @@ body.menu-open {
                 > a {
                     display: block;
                     position: relative;
-                    color: $main_bg;
+                    color: #000;
                     padding: 35px 0;
                     @include transition(0.3s);
-                    font-size: 21px;
+                    font-size: 24px;
                     font-weight: 400;
                     z-index: 1;
                 }

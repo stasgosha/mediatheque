@@ -1,8 +1,8 @@
 <div class="header-nav-wrap">
     <ul>
-        <li class="buy">
+        <!-- <li class="buy">
             <?php echo render_btn( 'לרכישת כרטיסים', 'buy-now-btn' ); ?>
-        </li>
+        </li> -->
         <li class="user">
             <a title="<?php _e( 'אזור אישי', 'ystheme' ); ?>">
                 <span class="icon meditech-user"></span>
