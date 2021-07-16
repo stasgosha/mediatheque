@@ -3482,12 +3482,16 @@ body.menu-open {
 
 .social-list {
     display: flex;
+    flex-direction: column;
     font-size: 23px;
     color: #000;
     margin-top: 24px;
 
     li {
+        display: flex;
+        align-items: center;
         margin-left: 27px;
+        margin-bottom: 15px;
         @include transition(0.3s);
 
         &:last-child {
@@ -3496,6 +3500,17 @@ body.menu-open {
 
         &:hover {
             color: $orange;
+        }
+
+        span {
+            &.text {
+                font-family: 'Anomalia';
+                font-weight: normal;
+                font-size: 17px;
+                line-height: 40px;
+                color: #FFFFFF;
+                margin-right: 8px;
+            }
         }
     }
 }

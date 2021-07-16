@@ -1,4 +1,4 @@
-<div class="col-lg-12 col-md-4 loop-post">
+<div class="col-lg-12 loop-post">
     <div <?php post_class(); ?> id="post-<?php echo $post->ID; ?>">
         <?php H::render_edit_post(); ?>
 
