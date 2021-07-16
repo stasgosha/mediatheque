@@ -1,0 +1,33 @@
+.hp-banner-section {
+  padding-bottom: 158px; }
+
+.hp-banner-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .hp-banner-card .card-content {
+    width: 838px;
+    height: 594px;
+    background: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 838 594'%3E%3Cpath d='M898 563.06V30.94A30.94 30.94 0 00867.08 0H31.66A30.97 30.97 0 00.71 30.94L68.3 563.06A30.93 30.93 0 0099.24 594h767.84A30.93 30.93 0 00898 563.06z' fill='%230348F4'/%3E%3C/svg%3E") no-repeat center center/contain;
+    margin-left: -54px;
+    padding: 140px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 23px;
+    line-height: 1.3; }
+  .hp-banner-card .card-category {
+    margin-bottom: 18px; }
+  .hp-banner-card .card-caption {
+    font-size: 64px;
+    line-height: 1;
+    font-weight: bold;
+    margin-bottom: 18px; }

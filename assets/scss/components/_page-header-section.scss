@@ -1,0 +1,38 @@
+.page-header-section{
+	min-height: 210px;
+	margin-bottom: 90px;
+	position: relative;
+	padding: 50px 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: right center;
+	color: #fff;
+
+	&:after{
+		content: '';
+		display: block;
+		width: 122px;
+		height: 122px;
+		border-radius: 50%;
+		background: var(--corner-color);
+		position: absolute;
+		right: 138px;
+		bottom: -39px;
+		clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+	}
+
+	.container{
+		position: relative;
+		z-index: 2;
+	}
+
+	.page-caption{
+		font-size: 54px;
+		font-family: $second-font;
+		font-weight: bold;
+		margin-top: 21px;
+		line-height: 1.1;
+		color: inherit;
+		margin-bottom: 0;
+	}
+}

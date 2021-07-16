@@ -2,7 +2,8 @@
 // compileCompressed: ../../build/css/main-style.css
 @import '_mixins.scss';
 @import '_fonts.scss'; // Reset
-$font1: 'OE August Pro';
+$font1: 'Almoni';
+$second-font: 'Anomalia';
 $orange: #DF561B;
 $blue: #0348F4;
 $turquoise: #00B0CD;
@@ -22,6 +23,11 @@ $light_purple: #D6B6FF;
 
 $text-color: #444;
 $text-dark: #222;
+
+$t: .3s;
+
+$primary: $blue;
+$accent: $turquoise;
 
 html {
     scroll-behavior: smooth;
@@ -320,7 +326,7 @@ span.ajax-loader {
 
     .text {
         @include transition(0.6s);
-		color: #074D5F;
+        color: $text-dark;
 		font-size: 18px;
 		line-height: 24px;
     }
@@ -329,9 +335,9 @@ span.ajax-loader {
         @include transition(0.6s);
         position: relative;
         top: 2px;
-        background-color: $blue_bg;
+        background-color: $yellow;
         width: 20px;
-        color: #fff;
+        color: $text-dark;
         border-radius: 50%;
         height: 20px;
         display: flex;
@@ -369,7 +375,7 @@ button {
     justify-content: center;
 
     .acme-news-ticker {
-        background-color: $light_blue;
+        background-color: #fff;
         height: 100%;
         max-width: 1810px;
         width: 100%;
@@ -684,21 +690,23 @@ ul.entry-links {
 }
 
 .content-wrap {
+    color: $text-color;
+
     h2,
     h3,
-    h4,
     h4,
     h5,
     h6 {
         font-size: 24px;
         line-height: 32px;
-        margin-bottom: 11px;
+        margin-bottom: 24px;
+        color: $primary;
     }
 
     p {
-        font-size: 18px;
-        line-height: 30px;
-        margin-bottom: 21px;
+        font-size: 21px;
+        line-height: 1.38;
+        margin-bottom: 24px;
         font-weight: 400;
     }
 
@@ -706,8 +714,8 @@ ul.entry-links {
         margin: 30px 0;
 
         li {
-            font-size: 18px;
-            line-height: 24px;
+            font-size: 21px;
+            line-height: 1.38;
             padding-right: 21px;
             position: relative;
             margin-bottom: 17px;
@@ -1091,41 +1099,7 @@ h6 {
     }
 }
 
-.btn {
-    background-color: #fff;
-    display: inline-flex;
-    padding: 0 20px;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    height: 55px;
-    color: #000;
-    font-size: 21px;
-    font-weight: 600;
-    border-bottom: 3px solid #000;
-    @include transition(0.6s);
 
-    &.orange {
-        background-color: $orange;
-        border-color: #AC3F10;
-        color: #fff;
-        min-width: 378px;
-    }
-
-    &.black {
-        background-color: #000;
-        border-color: #AC3F10;
-        color: #fff;
-        min-width: 378px;
-    }
-
-    &.text-btn {
-        background-color: transparent;
-        height: auto;
-        color: $main_bg;
-        font-size: 22px;
-    }
-}
 
 .entry-link {
     &:hover {
@@ -1555,14 +1529,18 @@ h6 {
 }
 
 .title-wrap {
-    margin-bottom: 56px;
+    margin-bottom: 75px;
 
     .entry-title {
-        font-family: 'greta';
-        line-height: 76px;
-        font-size: 64px;
-        width: 100%;
-        margin: 0;
+        font-size: 48px;
+        line-height: 1.1;
+        font-weight: bold;
+        color: #0348F4;
+        font-family: $second-font;
+
+        &.lightblue{
+            color: $accent;
+        }
     }
 
     .entry-text {
@@ -4704,8 +4682,13 @@ hr {
 
         &.swiper-slide-active {
             opacity: 1;
-            border: 3px solid $blue_bg !important;
+            border: 3px solid $yellow !important;
             padding: 2px;
+            border-radius: 6px;
+
+            img{
+                border-radius: 2px;
+            }
         }
     }
 }
@@ -4728,7 +4711,7 @@ hr {
 
 .block.block-content-image {
     .container {
-        border-bottom: 1px solid #ccc;
+        // border-bottom: 1px solid #ccc;
         padding-top: 50px;
         padding-bottom: 80px;
     }
@@ -4795,6 +4778,7 @@ hr {
 }
 
 .block-activities-grid {
+    background: #E6EDFE;
     padding: 80px 0;
 }
 .header-desktop {
@@ -4868,4 +4852,11 @@ hr {
 	}
 }
 
-@import 'components/_footer.scss';
+
+@import 'components/typography';
+@import 'components/buttons';
+@import 'components/footer';
+@import 'components/hp-banner-section';
+@import 'components/hp-featured-section';
+@import 'components/last-news-section';
+@import 'components/page-header-section';

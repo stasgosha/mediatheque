@@ -1,0 +1,126 @@
+.hp-banner-section{
+	padding-bottom: 8.2292vw;
+}
+
+.hp-banner-slider{
+	.slick-dots{
+		bottom: -80px !important;
+
+		li{
+			margin: 0 15px;
+			width: auto;
+			height: auto;
+		}
+
+		button{
+			width: 16px;
+			height: 16px;
+			display: block;
+			border-radius: 50%;
+			border: 3px solid #0348F4;
+			transition: all .3s;
+			opacity: .4;
+			box-sizing: border-box;
+			padding: 0;
+
+			&:before{
+				display: none;
+			}
+
+			&:hover,
+			&:focus{
+				opacity: 1;
+			}
+		}
+
+		.slick-active button{
+			border-width: 8px;
+			opacity: 1;
+			cursor: default;
+		}
+	}
+}
+
+.hp-banner-card{
+	display: flex;
+	font-family: $second-font;
+
+	.card-content{
+		width: 43.6458vw;
+		background: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 838 594'%3E%3Cpath d='M898 563.06V30.94A30.94 30.94 0 00867.08 0H31.66A30.97 30.97 0 00.71 30.94L68.3 563.06A30.93 30.93 0 0099.24 594h767.84A30.93 30.93 0 00898 563.06z' fill='%230348F4'/%3E%3C/svg%3E") no-repeat left center / cover;
+		padding: 7.2917vw;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		color: #fff;
+		font-size: 1.1979vw;
+		line-height: 1.3;
+	}
+
+	.card-image{
+		width: calc(100% - 43.6458vw + 2.8125vw);
+		margin-right: -2.8125vw;
+
+		svg{
+			display: block;
+		}
+	}
+
+	.card-category{
+		margin-bottom: 0.9375vw;
+	}
+
+	.card-caption{
+		font-size: 3.3333vw;
+		line-height: 1;
+		font-weight: bold;
+		margin-bottom: 0.9375vw;
+		color: inherit;
+	}
+
+	.card-text{
+		padding-bottom: 1.5104vw;
+		position: relative;
+		margin-bottom: 1.1458vw;
+
+		&:after{
+			content: '';
+			display: block;
+			width: 7.7083vw;
+			height: 0.3125vw;
+			background: $yellow;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+	}
+
+	.card-date{
+		font-size: 1.8750vw;
+		font-weight: bold;
+		line-height: 1;
+		margin-bottom: 0.8333vw;
+	}
+
+	.card-more-link{
+		font-weight: bold;
+		color: inherit;
+		display: flex;
+		align-items: center;
+
+		&:after{
+			content: '';
+			display: block;
+			width: 0.5729vw;
+			height: 0.8333vw;
+			margin-right: 0.4167vw;
+			flex: none;
+			background: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 16'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.94.94l2.12 2.12L5.12 8l4.94 4.94-2.12 2.12L.88 8 7.94.94z' fill='%23FFC400'/%3E%3C/svg%3E");
+		}
+
+		&:hover,
+		&:focus{
+			color: $yellow;
+		}
+	}
+}

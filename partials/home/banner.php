@@ -11,31 +11,31 @@ $text   = get_field( 'banner_text', $post->ID );
 $link   = get_field( 'banner_link', $post->ID );
 
 if ( $active ) : ?>
-<section class="section banner-section">
-	  <div class="container container-s">
-		<div class="custom-row">
-			  <div class="col6">
+	<section class="section banner-section">
+		  <div class="container container-s">
+			<div class="custom-row">
+				  <div class="col6">
 
-				<h2 class="entry-title">
-					<?php echo $title; ?>
-				</h2>
+					<h2 class="entry-title">
+						<?php echo $title; ?>
+					</h2>
 
-				<?php if ( $text ) : ?>
-					<p class="entry-text">
-						<?php echo $text; ?>
-					</p>
-				<?php endif; ?>
+					<?php if ( $text ) : ?>
+						<p class="entry-text">
+							<?php echo $text; ?>
+						</p>
+					<?php endif; ?>
 
-				<?php
-				if ( $link ) {
-					render_btn( $link['title'], false, $link['url'] );
-				}
-				?>
+					<?php
+					if ( $link ) {
+						render_btn( $link['title'], false, $link['url'] );
+					}
+					?>
+				</div>
 			</div>
-		</div>
 
-		<?php H::render_image( 'banner_image', 'full' ); ?>
-	  </div>
-</section>
-	<?php
-endif;
+			<?php H::render_image( 'banner_image', 'full' ); ?>
+		  </div>
+	</section>
+
+<?php endif; ?>

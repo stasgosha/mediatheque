@@ -68,6 +68,8 @@ $(document).ready(function () {
 	});
 
 
+
+
 	toggle_dark_mode();
 	ank_toggle();
 	init_select();
@@ -563,12 +565,44 @@ function sticky_header_init(){
 
 function init_homepage_functions(){
 
-	var home_banner = new Swiper('.main-slider', {
-		navigation: {
-		nextEl: ".main-slider .button-next",
-		prevEl: ".main-slider .button-prev",
-	  },
+	// var home_banner = new Swiper('.main-slider', {
+	// 	navigation: {
+	// 	nextEl: ".main-slider .button-next",
+	// 	prevEl: ".main-slider .button-prev",
+	//   },
 
+	// });
+
+	$('.hp-banner-slider').slick({
+		rtl: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		infinite: true,
+		arrows: false,
+		dots: true,
+		// fade: true
+	});
+
+	$('.cartoon-slider').slick({
+		rtl: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		infinite: true,
+		arrows: true,
+		dots: false,
+	});
+
+	$('.hp-featured-card').each(function(i, el){
+		const themeColor = $(el).find('.card-content').data('theme-color');
+		const svgThemeColor = themeColor.split('#').join('%23');
+
+		$(el).find('.card-content')[0].style.setProperty('--card-theme-color', themeColor);
+
+		if (i % 2 == 0) {
+			$(el).find('.card-content')[0].style.setProperty('--card-bg', `url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 297 457'%3E%3Cpath d='M297 23.78V433.2c0 13.15-9.86 23.8-22.02 23.8H21.2C9.02 457 .77 446.35.77 433.2L52.1 23.78C52.1 10.65 61.97 0 74.13 0h200.85C287.14 0 297 10.65 297 23.78z' fill='${svgThemeColor}'/%3E%3C/svg%3E")`);
+		} else{
+			$(el).find('.card-content')[0].style.setProperty('--card-bg', `url("data:image/svg+xml,%3Csvg width='297' height='457' viewBox='0 0 297 457' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 23.78V433.2C0 446.35 9.86 457 22.02 457H275.8c12.19 0 20.44-10.65 20.44-23.8L244.9 23.78C244.9 10.65 235.03 0 222.87 0H22.02C9.86 0 0 10.65 0 23.78z' fill='${svgThemeColor}'/%3E%3C/svg%3E%0A")`);
+		}
 	});
 
 	if ( $('body').hasClass('home') ) {

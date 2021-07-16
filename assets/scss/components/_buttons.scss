@@ -1,0 +1,33 @@
+.btn {
+	appearance: none;
+	background: $primary;
+	color: #fff;
+	display: inline-flex;
+	padding: 0 60px;
+	min-width: 320px;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	min-height: 58px;
+	color: #fff;
+	font-size: 24px;
+	font-weight: 700;
+	border: 0;
+	transition: all $t;
+	border-radius: 29px;
+	font-family: $second-font;
+
+	&:hover,
+	&:focus{
+		background: darken($primary, 10%);
+	}
+
+	&.lightblue {
+		background: $accent;
+
+		&:hover,
+		&:focus{
+			background: darken($accent, 10%);
+		}
+	}
+}

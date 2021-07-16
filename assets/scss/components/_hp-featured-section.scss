@@ -1,0 +1,142 @@
+.hp-featured-section{
+	padding: 80px 0;
+	background: #E6EDFE;
+
+	.section-footer{
+		margin-top: 70px;
+		display: flex;
+		justify-content: center;
+	}
+
+	.section-caption{
+		margin-bottom: 70px;
+	}
+
+	.section-grid{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 60px;
+		max-width: 1100px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.hp-featured-card{
+	display: flex;
+	width: 520px;
+	font-family: $second-font;
+
+	.card-image{
+		width: 268px;
+
+		svg{
+			display: block;
+		}
+	}
+
+	.card-content{
+		color: #fff;
+		font-size: 21px;
+		line-height: 1.25;
+		padding: 75px 25px 25px;
+		background: var(--card-bg) no-repeat center center / contain;
+		width: 296px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.card-category{
+		margin-bottom: 10px;
+	}
+
+	.card-caption{
+		font-size: 36px;
+		line-height: 1;
+		font-weight: bold;
+		color: inherit;
+		margin-bottom: 16px;
+		max-width: 220px;
+	}
+
+	.card-text{
+		max-width: 220px;
+	}
+
+	.card-btn{
+		padding: 0 60px;
+		height: 60px;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		font-weight: bold;
+		font-size: 21px;
+		line-height: 1.4;
+		color: var(--card-theme-color);
+		position: relative;
+		margin-top: auto;
+		transition: all $t;
+
+		&:before,
+		&:after{
+			content: '';
+			display: block;
+			width: 50%;
+			height: 100%;
+			background-image: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 248 61'%3E%3Cpath d='M11.48 60.95h225.04c6.34 0 11.48-5.37 11.48-12v-36c0-6.62-5.14-12-11.48-12H15.85c-6.33 0-10.53 5.46-11.47 12L0 48.95c0 6.63 5.14 12 11.48 12z' fill='%23fff'/%3E%3C/svg%3E");
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: absolute;
+			top: 0;
+		}
+
+		&:before{
+			right: 0;
+			background-position: right center;
+		}
+
+		&:after{
+			left: 0;
+			background-position: left center;
+		}
+
+		.btn-text{
+			position: relative;
+			z-index: 2;
+		}
+
+		&:hover,
+		&:focus{
+			transform: scale(1.05);
+		}
+	}
+
+	&:nth-child(odd){
+		.card-image{
+			margin-right: -46px;
+		}
+	}
+
+	&:nth-child(even){
+		flex-direction: row-reverse;
+		text-align: left;
+
+		.card-caption,
+		.card-text{
+			margin-right: auto;
+		}
+
+		.card-image{
+			margin-left: -46px;
+		}
+
+		.card-btn{
+			&:before,
+			&:after{
+				background-image: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 248 61'%3E%3Cpath d='M236.52 60.95H11.48C5.14 60.95 0 55.58 0 48.95v-36c0-6.62 5.14-12 11.48-12h220.67c6.33 0 10.53 5.46 11.47 12l4.38 36c0 6.63-5.14 12-11.48 12z' fill='%23fff'/%3E%3C/svg%3E");
+			}
+		}
+	}
+}

@@ -57,6 +57,8 @@ function ystheme_enqueue_assets() {
 	wp_enqueue_style( 'fancybox', THEME_URI . '/assets/css/jquery.fancybox.css', array(), THEME_VER );
 	wp_enqueue_style( 'magnific-popup', THEME_URI . '/assets/css/magnific-popup.css', array(), THEME_VER );
 	wp_enqueue_style( 'swiper', THEME_URI . '/assets/css/swiper-bundle.css', array(), THEME_VER );
+	wp_enqueue_style( 'slick', THEME_URI . '/assets/css/slick.min.css', array(), THEME_VER );
+	wp_enqueue_style( 'slick-theme', THEME_URI . '/assets/css/slick-theme.min.css', array(), THEME_VER );
 
 	// Assets - JS
 	wp_dequeue_script( 'moment' );
@@ -70,6 +72,7 @@ function ystheme_enqueue_assets() {
 	wp_enqueue_script( 'js-cookie', THEME_URI . '/assets/js/js.cookie.min.js', array(), THEME_VER, true );
 	wp_enqueue_script( 'jquery-mobile', THEME_URI . '/assets/js/jquery.mobile.custom.js', array(), THEME_VER, true );
 	wp_enqueue_script( 'swiper', THEME_URI . '/assets/js/swiper-bundle.js', array(), THEME_VER, true );
+	wp_enqueue_script( 'slick', THEME_URI . '/assets/js/slick.js', array(), THEME_VER, true );
 	wp_enqueue_script( 'esrojsapi', 'https://tickets.mediatheque.org.il/iframe/esrojsapi.js', array( 'jquery' ), THEME_VER, true );
 
 	if ( is_front_page() ) {

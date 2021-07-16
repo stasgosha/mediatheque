@@ -21,7 +21,7 @@ if ( wp_is_mobile() && $mobile_banner_title ) {
 if ( ! is_singular( 'mt_article' ) ) :
 	?>
 
-<div class="header-image <?php echo $color; ?>">
+<!-- <div class="header-image <?php echo $color; ?>">
 	<?php if ( ! is_singular( 'mt_event' ) ) : ?>
 
 		<div class="bg-wrap" data-design="<?php echo esc_html( $design ); ?>">
@@ -103,11 +103,22 @@ if ( ! is_singular( 'mt_article' ) ) :
 
 	<?php endif; ?>
 
+</div> -->
+
+<div class="page-header-section" style="--corner-color: #00B0CD; background-image: url(<?= get_template_directory_uri(); ?>/images/about-page-header-bg.svg);">
+	<div class="container container-l">
+		<div class="section-inner">
+			<?php yoast_breadcrumb( '<div class="breadcrumbs">', '</div>' ); ?>
+
+			<h1 class="page-caption"><?= $banner_title ?></h1>
+		</div>
+	</div>
 </div>
 <?php endif; ?>
 
-<div class="container container-l breadcrumbs-wrap">
+<!-- <div class="container container-l breadcrumbs-wrap">
 	<div class="custom-row">
 		<?php yoast_breadcrumb( '<div class="breadcrumbs">', '</div>' ); ?>
 	</div>
 </div>
+ -->

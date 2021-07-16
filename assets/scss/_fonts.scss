@@ -30,6 +30,54 @@
 	font-style: normal;
 	font-display: swap;
 }
+
+@font-face{
+	font-family: 'Almoni';
+	src: url('../../assets/fonts/Almoni/AlmoniMLv5AAA-Regular.woff2') format('woff2');
+	font-style: normal;
+	font-display: swap;
+	font-weight: 400;
+}
+
+@font-face{
+	font-family: 'Almoni';
+	src: url('../../assets/fonts/Almoni/AlmoniMLv5AAA-Medium.woff2') format('woff2');
+	font-style: normal;
+	font-display: swap;
+	font-weight: 500;
+}
+
+@font-face{
+	font-family: 'Almoni';
+	src: url('../../assets/fonts/Almoni/AlmoniMLv5AAA-Light.woff2') format('woff2');
+	font-style: normal;
+	font-display: swap;
+	font-weight: 300;
+}
+
+@font-face{
+	font-family: 'Anomalia';
+	src: url('../../assets/fonts/Anomalia/AnomaliaMLv2AAA-Regular.woff2') format('woff2');
+	font-style: normal;
+	font-display: swap;
+	font-weight: 400;
+}
+
+@font-face{
+	font-family: 'Anomalia';
+	src: url('../../assets/fonts/Anomalia/AnomaliaMLv2AAA-Bold.woff2') format('woff2');
+	font-style: normal;
+	font-display: swap;
+	font-weight: 700;
+}
+
+@font-face{
+	font-family: 'Anomalia';
+	src: url('../../assets/fonts/Anomalia/AnomaliaMLv2AAA-Light.woff2') format('woff2');
+	font-style: normal;
+	font-display: swap;
+	font-weight: 300;
+}
 /**
  * Font Awesome
  * Version: 4.7.0
