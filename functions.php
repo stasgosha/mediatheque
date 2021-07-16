@@ -775,7 +775,7 @@ function events_query_by_day( $date, $year, $week ) {
 
 
 			<div class="entry-body">
-				<div class="custom-row">
+				<div class="results-grid">
 					<?php
 
 					$has_posts = false;

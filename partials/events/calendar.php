@@ -19,6 +19,9 @@ $num     = gmdate( 'm', strtotime( $current ) );
 	<div class="container container-l">
 		<div class="custom-row">
 			<div class="col12">
+				<div class="section-top-text">
+					<p>לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית לורם איפסום דולור סיט אמט, לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית. סת אלמנקוםניסי נון ניבאה. דס איאקוליס וולופטה דיאם. וסטיבולום אט דולור קראס אגת לקטוס וואל אאוגו וסטיבולום סוליסי טידום בעליק. קונדימנטום קורוס בליקרה נונסטיקלובר בריקנה סטום, לפריקך תצטריק לרטי.</p>
+				</div>
 				<div class="header-wrap">
 					<div class="days-slider swiper-container">
 						<div class="days-slider-wrapper">

@@ -5,7 +5,30 @@ $ages     = get_field( 'ages', get_the_ID() );
 $type     = get_field( 'type', get_the_ID() );
 
 ?>
-<div <?php post_class( 'entry-activity' ); ?> id="activity-<?php echo esc_html( $post->ID ); ?>">
+<div class="event-card" id="activity-<?php echo esc_html( $post->ID ); ?>">
+	<div class="card-main">
+		<p class="card-category">הזמנת כרטיסים</p>
+		<h3 class="card-caption"><?php the_title(); ?></h3>
+		<p class="card-subcaption"><?= $subtitle; ?></p>
+	</div>
+	<div class="card-side">
+		<div class="card-image">
+			<svg viewBox="0 0 185 245" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                    <mask id="event-card-image-mask" width="185" height="245">
+                        <path fill="#fff" d="M9.63 244.52l165.74-21c5.32 0 9.63-4.3 9.63-9.62V9.62c0-5.3-4.31-9.61-9.63-9.61H9.63A9.63 9.63 0 000 9.61v225.3c0 5.3 4.31 9.61 9.63 9.61z"></path>
+                    </mask>
+                </defs>
+                <image width="185" xlink:href="<?php echo get_template_directory_uri(); ?>/images/wolf.jpg" mask="url(#event-card-image-mask)"></image>
+            </svg>
+			<?php // H::the_post_thumbnail( 'upcoming-slide' ); ?>
+		</div>
+		<a href="<?php the_permalink(); ?>" class="card-button">למידע נוסף</a>
+	</div>
+</div>
+
+
+<!-- <div <?php post_class( 'entry-activity' ); ?> id="activity-<?php echo esc_html( $post->ID ); ?>">
 
 	<a href="<?php the_permalink(); ?>" class="post-thumbnail">
 		<?php H::the_post_thumbnail( 'upcoming-slide' ); ?>
@@ -64,4 +87,4 @@ $type     = get_field( 'type', get_the_ID() );
 			<?php echo wp_trim_words( get_the_excerpt(), 15); ?>
 		</div>
 	<?php endif; ?>
-</div>
+</div> -->
