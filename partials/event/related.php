@@ -84,6 +84,10 @@ if ( $query->have_posts() ) :
         </div>
         <div class="swiper-pagination hide-desktop"></div>
     </div>
+
+    <div class="section-footer">
+        <a href="#" class="btn">לכל הפעילויות</a>
+    </div>
   </div>
 
 </section>

@@ -7,19 +7,24 @@ $type     = get_field( 'type', get_the_ID() );
 ?>
 <div class="event-card" id="activity-<?php echo esc_html( $post->ID ); ?>">
 	<div class="card-main">
-		<p class="card-category">הזמנת כרטיסים</p>
+		<p class="card-category"><?php echo wp_get_post_terms(get_the_ID(),'event_cat')[0]->name;?></p>
 		<h3 class="card-caption"><?php the_title(); ?></h3>
 		<p class="card-subcaption"><?= $subtitle; ?></p>
 	</div>
 	<div class="card-side">
 		<div class="card-image">
+            <?php
+            $thumb_id = get_post_thumbnail_id(get_the_ID());
+            $thumb_url = wp_get_attachment_image_src($thumb_id,'search-result', true);
+            $image_alt = get_post_meta( $thumb_id, '_wp_attachment_image_alt', true);
+            ?>
 			<svg viewBox="0 0 185 245" preserveAspectRatio="xMidYMid slice">
                 <defs>
                     <mask id="event-card-image-mask" width="185" height="245">
                         <path fill="#fff" d="M9.63 244.52l165.74-21c5.32 0 9.63-4.3 9.63-9.62V9.62c0-5.3-4.31-9.61-9.63-9.61H9.63A9.63 9.63 0 000 9.61v225.3c0 5.3 4.31 9.61 9.63 9.61z"></path>
                     </mask>
                 </defs>
-                <image width="185" xlink:href="<?php echo get_template_directory_uri(); ?>/images/wolf.jpg" mask="url(#event-card-image-mask)"></image>
+                <image width="185" xlink:href="<?php echo $thumb_url[0]; ?>" mask="url(#event-card-image-mask)"></image>
             </svg>
 			<?php // H::the_post_thumbnail( 'upcoming-slide' ); ?>
 		</div>

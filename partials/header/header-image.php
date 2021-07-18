@@ -105,7 +105,7 @@ if ( ! is_singular( 'mt_article' ) ) :
 
 </div> -->
 
-<div class="page-header-section" style="--corner-color: #00B0CD; background-image: url(<?= get_template_directory_uri(); ?>/images/about-page-header-bg.svg);">
+<div class="page-header-section" style="--corner-color: <?php echo get_field('color');?>; background-image: url(<?= get_template_directory_uri(); ?>/images/about-page-header-bg.svg);">
 	<div class="container container-l">
 		<div class="section-inner">
 			<?php yoast_breadcrumb( '<div class="breadcrumbs">', '</div>' ); ?>
@@ -114,6 +114,13 @@ if ( ! is_singular( 'mt_article' ) ) :
 		</div>
 	</div>
 </div>
+
+<?php if (is_category()) { ?>
+    <div class="cat-description">
+        <?php echo category_description(); ?>
+    </div>
+<?php } ?>
+
 <?php endif; ?>
 
 <!-- <div class="container container-l breadcrumbs-wrap">
