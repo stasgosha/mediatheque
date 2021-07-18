@@ -1,0 +1,147 @@
+.archive.category {
+  .page-header-section {
+    margin-bottom: 51px;
+  }
+
+  .cat-description {
+    margin-bottom: 51px;
+
+    p {
+      font-family: 'Almoni';
+      font-size: 21px;
+      font-weight: 400;
+      line-height: 29px;
+      color: #444444;
+      text-align: center;
+    }
+  }
+
+  @media only screen and (max-width: 1023px) {
+    .cat-description {
+      padding-right: 20px;
+
+      & p {
+        text-align: right;
+      }
+    }
+  }
+
+  .site-content {
+    background-color: #E6EDFE;
+    padding: 0 140px;
+    margin-bottom: 10px;
+
+    .row-posts > div {
+      flex: auto;
+      padding: 60px 0;
+      margin: 0;
+    }
+
+    .loop-post {
+      border-bottom: 1px solid #C0D3FF;
+
+      &:last-child {
+        border: none;
+      }
+
+      .post {
+        .post-thumbnail {
+          min-width: 380px;
+          height: 308px;
+
+          &:after {
+            background: none;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px
+          }
+        }
+
+        @media only screen and (max-width: 1023px) {
+          .post-thumbnail {
+            margin-bottom: 25px;
+          }
+        }
+
+        .post-block {
+          display: flex;
+          align-items: center;
+
+          .entry-footer {
+            padding-right: 40px;
+
+            .entry-title {
+              font-family: "Anomalia";
+              font-size: 40px;
+              line-height: 28px;
+              font-weight: bold;
+              margin-bottom: 15px;
+              color: #0348F4;
+            }
+
+            .entry-subtitle {
+              font-family: "Anomalia";
+              font-weight: normal;
+              font-size: 20px;
+              line-height: 23px;
+              margin-bottom: 10px;
+              color: #0348F4;
+            }
+
+            .entry-excerpt {
+              font-family: "Almoni";
+              font-weight: normal;
+              font-size: 21px;
+              line-height: 29px;
+              margin-bottom: 20px;
+              color: #444444;
+            }
+
+            a {
+              display: flex;
+              align-items: center;
+              background: #E73B47;
+              width: 200px;
+              justify-content: center;
+              font-family: 'Anomalia';
+              font-size: 20px;
+              font-weight: bold;
+              color: #fff;
+              padding: 5px;
+              line-height: 30px;
+              letter-spacing: 0.02em;
+              border-radius: 30px;
+
+              svg {
+                margin-right: 5px;
+              }
+            }
+          }
+
+          @media only screen and (max-width: 1023px) {
+            .entry-footer {
+              padding-right: 0;
+            }
+          }
+        }
+
+        @media only screen and (max-width: 1023px) {
+          .post-block {
+            align-items: end;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1023px) {
+    .site-content {
+      padding: 0 20px;
+    }
+  }
+}
