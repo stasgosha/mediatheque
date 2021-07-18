@@ -7,7 +7,7 @@ $days = array();
 
 ?>
 <section class="section events-results toggle-white-bg">
-	<div class="container container-l">
+	<div class="container">
 		<div class="custom-row">
 			<div class="col12">
 				<div class="results-wrap">

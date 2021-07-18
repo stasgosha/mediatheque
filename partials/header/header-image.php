@@ -105,15 +105,15 @@ if ( ! is_singular( 'mt_article' ) ) :
 
 </div> -->
 
-    <div class="page-header-section" style="--corner-color: <?php echo get_field('color');?>; background-image: url(<?= get_template_directory_uri(); ?>/images/about-page-header-bg.svg);">
-        <div class="container container-l">
-            <div class="section-inner">
-                <?php yoast_breadcrumb( '<div class="breadcrumbs">', '</div>' ); ?>
+<div class="page-header-section" style="--corner-color: <?php echo get_field('color');?>; background-image: url(<?= get_template_directory_uri(); ?>/images/about-page-header-bg.svg);">
+	<div class="container container-l">
+		<div class="section-inner">
+			<?php yoast_breadcrumb( '<div class="breadcrumbs">', '</div>' ); ?>
 
-                <h1 class="page-caption"><?= $banner_title ?></h1>
-            </div>
-        </div>
-    </div>
+			<h1 class="page-caption"><?= $banner_title ?></h1>
+		</div>
+	</div>
+</div>
 
 <?php if (is_category()) { ?>
     <div class="cat-description">

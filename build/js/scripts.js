@@ -978,8 +978,8 @@ function init_block_slider_images() {
 function init_activities_slider() {
 	$('.activities-block-slider, .related-slider').each(function () {
 		var swiper = new Swiper($(this)[0], {
-			slidesPerView: 3,
-			spaceBetween: 36,
+			slidesPerView: 4,
+			spaceBetween: 50,
 			navigation: {
 				nextEl: $(this).parent().find('.button-next')[0],
 				prevEl: $(this).parent().find('.button-prev')[0],
@@ -989,7 +989,12 @@ function init_activities_slider() {
 			 	clickable: true,
 			},
 			breakpoints: {
-			  1440: {
+			  1600: {
+				slidesPerView: 4,
+				spaceBetween: 50,
+
+			  },
+			  1200: {
 				slidesPerView: 3,
 				spaceBetween: 36,
 

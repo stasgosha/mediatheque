@@ -2,6 +2,8 @@
 <div class="wrap404">
 	<div class="container container-s">
 		<div class="d-flex">
+			<?php echo print_svg( THEME_URI . '/images/404.svg' ); ?>
+
 			<div class="wrap">
 				<h2 class="entry-subtitle">
 					<?php _e( 'אופס... הדף שחיפשתם לא נמצא!', 'ystheme' ); ?>
@@ -13,8 +15,6 @@
 					</span>
 				</a>
 			</div>
-
-			<?php echo print_svg( THEME_URI . '/images/404.svg' ); ?>
 		</div>
 
 	</div>

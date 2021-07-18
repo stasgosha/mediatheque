@@ -19,6 +19,9 @@ $num     = gmdate( 'm', strtotime( $current ) );
 	<div class="container container-l">
 		<div class="custom-row">
 			<div class="col12">
+				<div class="section-top-text">
+					<?php the_content(); ?>
+				</div>
 				<div class="header-wrap">
 					<div class="days-slider swiper-container">
 						<div class="days-slider-wrapper">
