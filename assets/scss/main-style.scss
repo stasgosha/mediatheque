@@ -1086,11 +1086,13 @@ h6 {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: $blue_bg;
+	color: #444444;
 	width: 100%;
 	margin-bottom: 45px;
-	font-size: 16px;
-	font-weight: bold;
+	font-weight: 500;
+	font-size: 17px;
+	font-family: 'Almoni';
+	transform: translate(-25%, -125%);
 
 	img {
 		margin-left: 9px;
@@ -4308,7 +4310,7 @@ hr {
 	position: fixed;
 	left: 0;
 	bottom: 0;
-	background: #FDC4C0;
+	background: #FFC400;
 	width: 100%;
 	padding: 14px 22px;
 	z-index: 9;
@@ -4321,7 +4323,7 @@ hr {
 
 		li {
 			flex-grow: 1;
-			border-left: 1px solid rgba(7, 77, 95, 0.3);
+			border-left: 1px solid rgb(255, 255, 255, 0.3);
 
 			&:last-child {
 				border: 0;
@@ -4341,7 +4343,12 @@ hr {
 			}
 
 			.text {
-				font-size: 15px;
+				font-family: 'Almoni';
+				font-weight: 500;
+				font-size: 17px;
+				line-height: 24px;
+				text-align: center;
+				color: #FFFFFF;
 			}
 		}
 	}
@@ -4999,3 +5006,4 @@ hr {
 @import 'components/calendar-pages';
 @import 'components/category.scss';
 @import 'components/magazine.scss';
+@import 'components/contact.scss';

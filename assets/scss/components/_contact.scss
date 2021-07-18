@@ -1,0 +1,245 @@
+.page-template-tpl-contact {
+  .contact-main-wrap {
+    padding: 30px 0 120px;
+
+    .entry-title {
+      font-family: 'Anomalia';
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 23px;
+      text-align: right;
+      color: #0348F4;
+      margin-bottom: 24px;
+    }
+
+    .entry-text {
+      font-family: 'Almoni';
+      font-weight: normal;
+      font-size: 21px;
+      line-height: 29px;
+      text-align: right;
+      color: #444444;
+
+      a {
+        color: #0348F4;
+      }
+    }
+
+    hr {
+      border-top: 1px solid #C0D3FF;
+    }
+
+    .entry-subtitle {
+      font-family: 'Anomalia';
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 23px;
+      text-align: right;
+      color: #0348F4;
+      margin-bottom: 24px;
+    }
+
+    .d-flex {
+      margin-bottom: 48px;
+
+      .wrap {
+        &:nth-child(2) {
+          border-right: 1px solid #C0D3FF;
+          padding: 0 62px 0 81px;
+        }
+
+        &:nth-child(3) {
+          border-right: 1px solid #C0D3FF;
+          padding: 0 60px 0 0;
+        }
+
+        @media only screen and (max-width: 992px) {
+          &:nth-child(2) {
+            padding: 25px 0;
+            border-right: none;
+            border-bottom: 1px solid #C0D3FF;
+          }
+
+          &:nth-child(3) {
+            padding: 25px 0;
+            border-right: none;
+            border-bottom: 1px solid #C0D3FF;
+          }
+        }
+
+        ul {
+          margin-bottom: 0;
+
+          li {
+            display: inline-block;
+            font-family: 'Almoni';
+            font-weight: normal;
+            font-size: 21px;
+            line-height: 36px;
+            text-align: right;
+            color: #444444;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    .contact-us {
+      background-color: #00B0CD;
+      border-radius: 24px;
+      padding: 51px 65px 70px;
+
+      .entry-form-title {
+        font-family: 'Anomalia';
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 30px;
+        text-align: right;
+        color: #FFFFFF;
+        margin-bottom: 34px;
+      }
+
+      @media only screen and (max-width: 992px) {
+        .entry-form-title {
+          padding-top: 0;
+          margin: 0 0 35px;
+          border-top: none;
+          text-align: center;
+          color: #0348F4;
+        }
+      }
+
+      form {
+        input[type=email],
+        input[type=tel],
+        input[type=text],
+        textarea {
+          font-family: 'Almoni';
+          font-weight: normal;
+          font-size: 23px !important;
+          line-height: 34px;
+          text-align: right;
+          color: #444444;
+          background-color: #fff;
+          height: 46px;
+          border-radius: 6px;
+        }
+
+        @media only screen and (max-width: 992px) {
+          input[type=email]::placeholder,
+          input[type=tel]::placeholder,
+          input[type=text]::placeholder,
+          textarea::placeholder {
+            color: #0348F4;
+          }
+
+          input[type=email],
+          input[type=tel],
+          input[type=text],
+          textarea {
+            border-color: #0348F4;
+          }
+        }
+
+        textarea {
+          height: 126px;
+        }
+
+        @media only screen and (max-width: 992px) {
+          textarea {
+            height: 86px;
+          }
+        }
+
+        .submit-wrap {
+          margin-top: 30px;
+
+          .hover-flip-item-wrapper {
+            background-color: #0348F4;
+            justify-content: center;
+            font-family: 'Anomalia';
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 26px;
+            text-align: center;
+            color: #FFFFFF;
+          }
+
+          .wpcf7-form-control-wrap {
+            .wpcf7-list-item {
+              .wpcf7-list-item-label {
+                font-family: 'Almoni';
+                font-weight: normal;
+                font-size: 21px;
+                line-height: 32px;
+                text-align: right;
+                color: #FFFFFF;
+
+                &:before {
+                  background: #fff;
+                  border: 1px solid #fff;
+                  border-radius: 3px;
+                }
+
+                @media only screen and (max-width: 992px) {
+                  &:before {
+                    background: #0348F4;
+                    border: 1px solid #0348F4;
+                    border-radius: 3px;
+                  }
+                }
+              }
+
+              [type=checkbox]:checked + .wpcf7-list-item-label:before {
+                color: #0348F4;
+                font-weight: bold;
+              }
+
+              @media only screen and (max-width: 992px) {
+                [type=checkbox]:checked + .wpcf7-list-item-label:before {
+                  color: #fff;
+                }
+
+                .wpcf7-list-item-label {
+                  color: #444444;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media only screen and (max-width: 992px) {
+      .d-flex > div {
+        border-bottom: 1px solid #C0D3FF;
+      }
+
+      .contact-us {
+        padding: 51px 20px 50px;
+        background-color: #E6EDFE;
+      }
+    }
+
+    .white_orange {
+      h3{
+        a {
+          border: 1px solid #D8E3FF;
+          padding: 2px 30px;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 992px) {
+      .white_orange {
+        margin-bottom: 46px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 992px) {
+    .contact-main-wrap {
+      padding: 30px 0 10px;
+    }
+  }
+}
