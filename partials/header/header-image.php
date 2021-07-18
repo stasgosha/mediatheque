@@ -1,27 +1,27 @@
 <?php
 if ( ! class_exists( 'H' ) ) {
-	return;
+    return;
 }
 
 if ( is_tax() ) {
-	$term   = get_queried_object();
-	$design = get_field( 'header_design', $term );
-	$color  = get_field( 'header_color', $term );
+    $term   = get_queried_object();
+    $design = get_field( 'header_design', $term );
+    $color  = get_field( 'header_color', $term );
 } else {
-	$design = get_field( 'header_design' );
-	$color  = get_field( 'header_color' );
+    $design = get_field( 'header_design' );
+    $color  = get_field( 'header_color' );
 }
 
 $mobile_banner_title = get_field( 'mobile_banner_title' );
 $banner_title        = get_the_title();
 if ( wp_is_mobile() && $mobile_banner_title ) {
-	$banner_title = $mobile_banner_title;
+    $banner_title = $mobile_banner_title;
 }
 
 if ( ! is_singular( 'mt_article' ) ) :
-	?>
+    ?>
 
-<!-- <div class="header-image <?php echo $color; ?>">
+    <!-- <div class="header-image <?php echo $color; ?>">
 	<?php if ( ! is_singular( 'mt_event' ) ) : ?>
 
 		<div class="bg-wrap" data-design="<?php echo esc_html( $design ); ?>">
@@ -56,11 +56,11 @@ if ( ! is_singular( 'mt_article' ) ) :
 
 		</div>
 		<?php
-	else :
-		$ages                    = get_field( 'ages', get_the_ID() );
-		$type                    = get_field( 'type', get_the_ID() );
-		$mobile_video_youtube_id = get_field( 'mobile_video_youtube_id', get_the_ID() );
-		?>
+    else :
+        $ages                    = get_field( 'ages', get_the_ID() );
+        $type                    = get_field( 'type', get_the_ID() );
+        $mobile_video_youtube_id = get_field( 'mobile_video_youtube_id', get_the_ID() );
+        ?>
 
 	<?php if ( wp_is_mobile() && isset( $mobile_video_youtube_id ) && $mobile_video_youtube_id ) : ?>
 		<div class="mobile-video-play-button">
@@ -105,15 +105,22 @@ if ( ! is_singular( 'mt_article' ) ) :
 
 </div> -->
 
-<div class="page-header-section" style="--corner-color: #00B0CD; background-image: url(<?= get_template_directory_uri(); ?>/images/about-page-header-bg.svg);">
-	<div class="container container-l">
-		<div class="section-inner">
-			<?php yoast_breadcrumb( '<div class="breadcrumbs">', '</div>' ); ?>
+    <div class="page-header-section" style="--corner-color: <?php echo get_field('color');?>; background-image: url(<?= get_template_directory_uri(); ?>/images/about-page-header-bg.svg);">
+        <div class="container container-l">
+            <div class="section-inner">
+                <?php yoast_breadcrumb( '<div class="breadcrumbs">', '</div>' ); ?>
 
-			<h1 class="page-caption"><?= $banner_title ?></h1>
-		</div>
-	</div>
-</div>
+                <h1 class="page-caption"><?= $banner_title ?></h1>
+            </div>
+        </div>
+    </div>
+
+<?php if (is_category()) { ?>
+    <div class="cat-description">
+        <?php echo category_description(); ?>
+    </div>
+<?php } ?>
+
 <?php endif; ?>
 
 <!-- <div class="container container-l breadcrumbs-wrap">
