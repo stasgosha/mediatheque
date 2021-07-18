@@ -314,6 +314,10 @@ span.ajax-loader {
 				img {
 
 				}
+
+				&:after {
+					content: none;
+				}
 			}
 		}
 	}
@@ -1388,7 +1392,7 @@ h6 {
 		margin: 55px 0 60px;
 		border-width: 1px 0;
 		border-style: solid;
-		border-color: #CDDBDF;
+		border-color: #C0D3FF;
 	}
 }
 
@@ -3484,12 +3488,16 @@ body.menu-open {
 
 .social-list {
 	display: flex;
+	flex-direction: column;
 	font-size: 23px;
 	color: #000;
 	margin-top: 24px;
 
 	li {
+		display: flex;
+		align-items: center;
 		margin-left: 27px;
+		margin-bottom: 15px;
 		@include transition(0.3s);
 
 		&:last-child {
@@ -3498,6 +3506,17 @@ body.menu-open {
 
 		&:hover {
 			color: $orange;
+		}
+
+		span {
+			&.text {
+				font-family: 'Anomalia';
+				font-weight: normal;
+				font-size: 17px;
+				line-height: 40px;
+				color: #FFFFFF;
+				margin-right: 8px;
+			}
 		}
 	}
 }
@@ -4979,3 +4998,4 @@ hr {
 @import 'components/page-header-section';
 @import 'components/calendar-pages';
 @import 'components/category.scss';
+@import 'components/magazine.scss';
