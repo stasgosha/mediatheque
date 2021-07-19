@@ -79,6 +79,43 @@ $form_title       = get_field( 'footer_newsletter_title', 'option' );
 
 				</nav>
 
+				<?php if ( $sales ) : ?>
+					<?php if ( $sales['title'] ) : ?>
+						<h4 class="entry-title m-top">
+							<?php echo $sales['title']; ?>
+						</h4>
+					<?php endif; ?>
+
+					<nav class="footer-nav">
+						<ul class="menu">
+
+							<li>
+								<span class="text">
+									<?php _e( 'טלפון: ', 'ystheme' ); ?>
+								</span>
+								<a href="tel:<?php echo $sales['phone']; ?>">
+									<?php echo $sales['phone']; ?>
+								</a>
+							</li>
+
+							<?php if ( $sales['fax'] ) : ?>
+
+								<li>
+									<span class="text">
+										<?php _e( 'פקס: ', 'ystheme' ); ?>
+									</span>
+									<a href="#">
+										<?php echo $sales['fax']; ?>
+									</a>
+								</li>
+
+							<?php endif; ?>
+						</ul>
+
+					</nav>
+
+				<?php endif; ?>
+
 			</div>
 		<?php endif; ?>
 
@@ -117,43 +154,6 @@ $form_title       = get_field( 'footer_newsletter_title', 'option' );
 					</ul>
 
 				</nav>
-
-				<?php if ( $sales ) : ?>
-					<?php if ( $sales['title'] ) : ?>
-						<h4 class="entry-title m-top">
-							<?php echo $sales['title']; ?>
-						</h4>
-					<?php endif; ?>
-
-					<nav class="footer-nav">
-						<ul class="menu">
-
-							<li>
-								<span class="text">
-									<?php _e( 'טלפון: ', 'ystheme' ); ?>
-								</span>
-								<a href="tel:<?php echo $sales['phone']; ?>">
-									<?php echo $sales['phone']; ?>
-								</a>
-							</li>
-
-							<?php if ( $sales['fax'] ) : ?>
-
-								<li>
-									<span class="text">
-										<?php _e( 'פקס: ', 'ystheme' ); ?>
-									</span>
-									<a href="#">
-										<?php echo $sales['fax']; ?>
-									</a>
-								</li>
-
-							<?php endif; ?>
-						</ul>
-
-					</nav>
-
-				<?php endif; ?>
 			</div>
 		<?php endif; ?>
 
