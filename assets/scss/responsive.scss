@@ -47,10 +47,6 @@ $orange: #DF561B;
 	.main-navigation-wrap .main-navigation .menu > li {
 		margin-left: 20px;
 
-		> a {
-			font-size: 18px;
-		}
-
 		ul.sub-menu {
 			li {
 				> a {
@@ -93,7 +89,7 @@ $orange: #DF561B;
 	}
 
 	.main-navigation-wrap .main-navigation .menu > li > a {
-		font-size: 16px;
+		font-size: 22px;
 	}
 
 	.site-header .header-nav-wrap {
@@ -122,7 +118,7 @@ $orange: #DF561B;
 		margin-left: 10px;
 
 		> a {
-			font-size: 14px;
+			font-size: 20px;
 		}
 	}
 }

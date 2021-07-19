@@ -1,5 +1,10 @@
 <?php
 $title    = get_field( 'related_title' );
+
+if (!$title) {
+    $title = 'פעילויות נוספות';
+}
+
 $text     = get_field( 'related_text' );
 $current  = get_the_ID();
 

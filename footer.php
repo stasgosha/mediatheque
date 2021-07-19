@@ -18,6 +18,12 @@ $video_s = get_field( 'mobile_video', 'option' );
 		</div>
 
 	</footer>
+
+	<div class="sticky-btn">
+		<div class="btn-text">כרטיסים  <br>רכישת</div>
+	</div>
+
+
 	<?php if ( $video_l && $video_s ) : ?>
 		<div class="video-overlay"></div>
 		<video  playsinline autoplay="autoplay" id="load-video" class="large" data-video-l="<?php echo $video_l; ?>" data-video-s="<?php echo $video_s; ?>">
