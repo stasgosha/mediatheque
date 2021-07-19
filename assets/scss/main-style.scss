@@ -314,6 +314,10 @@ span.ajax-loader {
 				img {
 
 				}
+
+				&:after {
+					content: none;
+				}
 			}
 		}
 	}
@@ -1086,11 +1090,13 @@ h6 {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: $blue_bg;
+	color: #444444;
 	width: 100%;
 	margin-bottom: 45px;
-	font-size: 16px;
-	font-weight: bold;
+	font-weight: 500;
+	font-size: 17px;
+	font-family: 'Almoni';
+	transform: translate(-25%, -125%);
 
 	img {
 		margin-left: 9px;
@@ -1406,7 +1412,7 @@ h6 {
 		margin: 55px 0 60px;
 		border-width: 1px 0;
 		border-style: solid;
-		border-color: #CDDBDF;
+		border-color: #C0D3FF;
 	}
 }
 
@@ -3554,12 +3560,16 @@ body.menu-open {
 
 .social-list {
 	display: flex;
+	flex-direction: column;
 	font-size: 23px;
 	color: #000;
 	margin-top: 24px;
 
 	li {
+		display: flex;
+		align-items: center;
 		margin-left: 27px;
+		margin-bottom: 15px;
 		@include transition(0.3s);
 
 		&:last-child {
@@ -3568,6 +3578,17 @@ body.menu-open {
 
 		&:hover {
 			color: $orange;
+		}
+
+		span {
+			&.text {
+				font-family: 'Anomalia';
+				font-weight: normal;
+				font-size: 17px;
+				line-height: 40px;
+				color: #FFFFFF;
+				margin-right: 8px;
+			}
 		}
 	}
 }
@@ -4396,7 +4417,7 @@ hr {
 	position: fixed;
 	left: 0;
 	bottom: 0;
-	background: #FDC4C0;
+	background: #FFC400;
 	width: 100%;
 	padding: 14px 22px;
 	z-index: 9;
@@ -4409,7 +4430,7 @@ hr {
 
 		li {
 			flex-grow: 1;
-			border-left: 1px solid rgba(7, 77, 95, 0.3);
+			border-left: 1px solid rgba(255, 255, 255, 0.3);
 
 			&:last-child {
 				border: 0;
@@ -4429,7 +4450,12 @@ hr {
 			}
 
 			.text {
-				font-size: 15px;
+				font-family: 'Almoni';
+				font-weight: 500;
+				font-size: 17px;
+				line-height: 24px;
+				text-align: center;
+				color: #FFFFFF;
 			}
 		}
 	}
@@ -5095,3 +5121,5 @@ hr {
 @import 'components/page-header-section';
 @import 'components/calendar-pages';
 @import 'components/category.scss';
+@import 'components/magazine.scss';
+@import 'components/contact.scss';

@@ -1,0 +1,197 @@
+.page-template-tpl-magazine {
+  .page-header-section {
+    margin-bottom: 51px;
+  }
+
+  .mag-section {
+
+    .mag-posts-wrap {
+      display: flex;
+
+      .entry-article-wide {
+        flex-direction: column;
+        align-items: baseline;
+      }
+    }
+
+    @media only screen and (max-width: 1023px) {
+      .mag-posts-wrap {
+        flex-direction: column;
+      }
+    }
+
+    .featured-row {
+      padding: 51px 0 0 0;
+      margin: 0 0 60px;
+      border-top: none;
+    }
+
+    @media only screen and (max-width: 1200px) {
+      .featured-row {
+        margin: 0;
+      }
+    }
+
+    .entry-text {
+      font-family: 'Almoni';
+      font-weight: normal;
+      font-size: 21px;
+      line-height: 29px;
+      text-align: center;
+      color: #444444;
+    }
+
+    @media only screen and (max-width: 1023px) {
+      .entry-text {
+        text-align: right;
+        padding: 0 30px;
+      }
+    }
+
+    .row-posts.grid-3 > div {
+      padding: 0 25px;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+      flex: 0 0 25%;
+    }
+
+    @media only screen and (max-width: 1023px) {
+      .row-posts.grid-3 > div {
+        flex: auto;
+      }
+    }
+
+    .entry-article-wide {
+      padding: 0 30px;
+
+      .post-thumbnail {
+        margin-left: 0 !important;
+        margin-bottom: 20px;
+        border-radius: 10px;
+      }
+
+      @media only screen and (max-width: 1023px) {
+        .post-thumbnail {
+          max-width: 335px;
+          height: 206px;
+        }
+      }
+
+      img {
+        height: 320px;
+        max-width: 100%;
+        object-fit: cover;
+      }
+
+      @media only screen and (max-width: 1200px) {
+        img {
+          height: 206px !important;
+        }
+      }
+
+      .entry-title {
+        font-family: 'Anomalia';
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 24px;
+        text-align: right;
+        color: #00B0CD;
+        margin: 14px 0 0;
+      }
+
+      .entry-meta {
+        font-family: 'Almoni';
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 20px;
+        text-align: right;
+        color: #444444;
+        padding: 13px 0;
+      }
+
+      .entry-excerpt {
+        font-family: 'Almoni';
+        font-weight: normal;
+        font-size: 21px;
+        line-height: 24px;
+        text-align: right;
+        color: #444444
+      }
+
+      .icon-link {
+        align-items: end;
+
+        .text {
+          font-family: 'Almoni';
+          font-weight: 500;
+          font-size: 21px;
+          color: #222222;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 1200px) {
+      .entry-article-wide {
+        padding: 0 0 30px 0;
+      }
+    }
+
+    .entry-article {
+      .post-thumbnail {
+        border-radius: 10px;
+      }
+
+      @media only screen and (max-width: 1023px) {
+        .post-thumbnail {
+          max-width: 335px;
+        }
+      }
+
+      @media only screen and (max-width: 1200px) {
+        img {
+          height: 206px !important;
+        }
+      }
+
+      .entry-title {
+        font-family: 'Anomalia';
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 24px;
+        text-align: right;
+        color: #00B0CD;
+        margin: 14px 0 0;
+      }
+
+      .entry-meta {
+        font-family: 'Almoni';
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 20px;
+        text-align: right;
+        color: #444444;
+        padding: 13px 0;
+      }
+
+      .entry-excerpt {
+        font-family: 'Almoni';
+        font-weight: normal;
+        font-size: 21px;
+        line-height: 24px;
+        text-align: right;
+        color: #444444;
+      }
+
+      .icon-link {
+        align-items: end;
+
+        .text {
+          font-family: 'Almoni';
+          font-weight: 500;
+          font-size: 21px;
+          color: #222222;
+        }
+      }
+    }
+  }
+}

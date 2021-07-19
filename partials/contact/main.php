@@ -20,6 +20,9 @@ $waze          = get_field( 'waze' );
 	<div class="container container-l">
 		<div class="custom-row">
 			<div class="col8">
+                <h4 class="entry-subtitle">
+                    דברו איתנו
+                </h4>
 				<?php if ( $text ) : ?>
 					<div class="entry-text">
 						<?php echo $text; ?>
@@ -140,7 +143,7 @@ $waze          = get_field( 'waze' );
 
 
 				</div>
-				<hr>
+<!--				<hr>-->
 
 				<div class="hide-desktop">
 					<?php if ( $sidebar_title ) : ?>
@@ -168,15 +171,15 @@ $waze          = get_field( 'waze' );
 
 				</div>
 
+                <div class="contact-us">
+                    <?php if ( $form_title ) : ?>
+                        <h4 class="entry-form-title">
+                            <?php echo $form_title; ?>
+                        </h4>
+                    <?php endif; ?>
 
-				<?php if ( $form_title ) : ?>
-					<h4 class="entry-form-title">
-						<?php echo $form_title; ?>
-					</h4>
-				<?php endif; ?>
-
-				<?php echo H::render_cf7( 'form' ); ?>
-
+                    <?php echo H::render_cf7( 'form' ); ?>
+                </div>
 
 			</div>
 			<div class="col4 hide-mobile">
