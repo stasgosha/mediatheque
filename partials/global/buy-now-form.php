@@ -57,7 +57,8 @@ if ( $query->have_posts() ) :
         <input type="text" class="buy-now-date-picker" placeholder="<?php _e( 'בחרו תאריך', 'ystheme' ); ?>" disabled="disabled">
     </div>
     <div class="hidden-fields">
-        <?php render_btn( __( 'לרכישת כרטיסים', 'ystheme' ) ); ?>
+        <button class="btn">רכישה</button>
+        <?php //render_btn( __( 'לרכישת כרטיסים', 'ystheme' ) ); ?>
     </div>
 
 

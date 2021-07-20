@@ -220,7 +220,7 @@
         background-color: transparent;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='375' height='655' viewBox='0 0 375 655' fill='none'%3E%3Cpath d='M19.5325 0L355.468 19.7139C366.243 19.7139 375 27.3597 375 36.7879V655C375 655 366.243 655 355.468 655H19.5325C8.73822 655 0 655 0 655V17.0739C0 7.64577 8.73822 0 19.5325 0Z' fill='%23E6EDFE'/%3E%3C/svg%3E");
         background-repeat: no-repeat;
-        background-position: right;
+        background-position: right top;
         background-size: cover;
       }
     }
@@ -244,6 +244,14 @@
   @media only screen and (max-width: 992px) {
     .contact-main-wrap {
       padding: 30px 0 10px;
+    }
+  }
+
+  @media screen and (max-width: 575px){
+    .contact-us{
+      width: calc(100% + 30px);
+      margin-left: -15px;
+      margin-right: -15px;
     }
   }
 }

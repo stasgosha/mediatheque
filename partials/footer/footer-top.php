@@ -39,123 +39,63 @@ $form_title       = get_field( 'footer_newsletter_title', 'option' );
 
 		<?php endwhile; ?>
 
-		<?php if ( $contact ) : ?>
+
 			<div class="footer-col footer-col-menu contact-col">
-				<?php if ( $contact['title'] ) : ?>
-					<h4 class="entry-title">
-						<?php echo $contact['title']; ?>
-					</h4>
-				<?php endif; ?>
+                <?php if( have_rows('menus_footer','option') ): ?>
+                    <?php
+                    $i=0;
+                    while( have_rows('menus_footer','option') ): the_row(); $i++; if($i<3){ ?>
+                            <h4 class="entry-title">
+                                <?php echo get_sub_field('title');?>
+                            </h4>
+                        <nav class="footer-nav">
+                            <ul class="menu">
+                                        <?php if( get_sub_field('contacts') ): ?>
+                                            <?php while( has_sub_field('contacts') ): ?>
+                                                <li>
+                                                    <span class="text">
+                                                        <?php echo get_sub_field('text');?>
+                                                    </span>
+                                                </li>
+                                            <?php endwhile; ?>
+                                        <?php endif; ?>
+                            </ul>
 
-				<nav class="footer-nav">
-					<ul class="menu">
-						<li>
-							<span class="text">
-								<?php echo $contact['address']; ?>
-							</span>
-						</li>
-						<li>
-							<span class="text">
-								<?php _e( 'טלפון: ', 'ystheme' ); ?>
-							</span>
-							<a href="tel:<?php echo $contact['phone']; ?>">
-								<?php echo $contact['phone']; ?>
-							</a>
-						</li>
-
-						<?php if ( $contact['fax'] ) : ?>
-
-							<li>
-								<span class="text">
-									<?php _e( 'פקס: ', 'ystheme' ); ?>
-								</span>
-								<a href="#">
-									<?php echo $contact['fax']; ?>
-								</a>
-							</li>
-
-						<?php endif; ?>
-					</ul>
-
-				</nav>
-
-				<?php if ( $sales ) : ?>
-					<?php if ( $sales['title'] ) : ?>
-						<h4 class="entry-title m-top">
-							<?php echo $sales['title']; ?>
-						</h4>
-					<?php endif; ?>
-
-					<nav class="footer-nav">
-						<ul class="menu">
-
-							<li>
-								<span class="text">
-									<?php _e( 'טלפון: ', 'ystheme' ); ?>
-								</span>
-								<a href="tel:<?php echo $sales['phone']; ?>">
-									<?php echo $sales['phone']; ?>
-								</a>
-							</li>
-
-							<?php if ( $sales['fax'] ) : ?>
-
-								<li>
-									<span class="text">
-										<?php _e( 'פקס: ', 'ystheme' ); ?>
-									</span>
-									<a href="#">
-										<?php echo $sales['fax']; ?>
-									</a>
-								</li>
-
-							<?php endif; ?>
-						</ul>
-
-					</nav>
-
-				<?php endif; ?>
-
+                        </nav>
+                    <?php } endwhile; ?>
+                <?php endif; ?>
 			</div>
-		<?php endif; ?>
 
-		<?php if ( $service ) : ?>
+
+
 			<div class="footer-col footer-col-menu hide-mobile">
-				<?php if ( $service['title'] ) : ?>
-					<h4 class="entry-title">
-						<?php echo $service['title']; ?>
-					</h4>
-				<?php endif; ?>
+                <?php if( have_rows('menus_footer','option') ): ?>
+                    <?php
+                    $i=0;
+                    while( have_rows('menus_footer','option') ): the_row(); $i++; if($i>2){ ?>
+                        <h4 class="entry-title">
+                            <?php echo get_sub_field('title');?>
+                        </h4>
+                        <nav class="footer-nav">
+                            <ul class="menu">
 
-				<nav class="footer-nav">
-					<ul class="menu">
+                                <?php if( get_sub_field('contacts') ): ?>
+                                    <?php while( has_sub_field('contacts') ): ?>
+                                        <li>
+                                                    <span class="text">
+                                                        <?php echo get_sub_field('text');?>
+                                                    </span>
+                                        </li>
+                                    <?php endwhile; ?>
+                                <?php endif; ?>
 
-						<li>
-							<span class="text">
-								<?php _e( 'טלפון: ', 'ystheme' ); ?>
-							</span>
-							<a href="tel:<?php echo $service['phone']; ?>">
-								<?php echo $service['phone']; ?>
-							</a>
-						</li>
+                            </ul>
 
-						<?php if ( $service['fax'] ) : ?>
-
-							<li>
-								<span class="text">
-									<?php _e( 'פקס: ', 'ystheme' ); ?>
-								</span>
-								<a href="#">
-									<?php echo $service['fax']; ?>
-								</a>
-							</li>
-
-						<?php endif; ?>
-					</ul>
-
-				</nav>
+                        </nav>
+                    <?php } endwhile; ?>
+                <?php endif; ?>
 			</div>
-		<?php endif; ?>
+
 
 
 

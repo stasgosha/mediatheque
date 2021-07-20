@@ -19,10 +19,9 @@ $video_s = get_field( 'mobile_video', 'option' );
 
 	</footer>
 
-	<div class="sticky-btn">
+	<button class="sticky-btn buy-now-btn">
 		<div class="btn-text">כרטיסים  <br>רכישת</div>
-	</div>
-
+	</button>
 
 	<?php if ( $video_l && $video_s ) : ?>
 		<div class="video-overlay"></div>

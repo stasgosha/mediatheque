@@ -1101,3 +1101,25 @@ $('a[href*="#"]').click(function(e){
 		$('html, body').animate({scrollTop:$(theHashTag).offset().top},1000);
 	}
 });
+
+$(document).ready(function(){
+
+	$('.count-select').each(function(i, el){
+		let input = $(this).closest('.count-select').find('input');
+
+		$(el).find('.change-count').click(function(e){
+			e.preventDefault();
+
+			let count = +input.val();
+
+			if (count > 1 && $(this).hasClass('minus')) {
+				input.val(--count);
+			}
+
+			if ($(this).hasClass('plus')) {
+				input.val(++count);
+			}
+		});
+	});
+
+});

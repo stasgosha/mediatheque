@@ -28,9 +28,9 @@
 			</header>
 
 			<?php
-			if ( ! is_front_page() && ! is_404() ) {
-				get_template_part( 'partials/header/header-image' );
-			}
+				if ( ! is_front_page() && ! is_404() ) {
+					get_template_part( 'partials/header/header-image' );
+				}
 			?>
 
 			<div id="content" class="site-content">

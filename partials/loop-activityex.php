@@ -1,18 +1,32 @@
 <?php
 
-$subtitle = get_field( 'subtitle', get_the_ID() );
+$subtitle = get_field( 'subtitle_post', get_the_ID() );
 $ages     = get_field( 'ages', get_the_ID() );
 $type     = get_field( 'type', get_the_ID() );
 global $row_time;
 ?>
 <div class="event-card" id="activity-<?php echo esc_html( $post->ID ); ?>">
 	<div class="card-main">
-		<p class="card-category"><?php echo wp_get_post_terms(get_the_ID(),'event_cat')[0]->name;?></p>
+		<p class="card-category"><?php echo wp_get_post_terms(get_the_ID(),'exhibition_cat')[0]->name;?></p>
 		<h3 class="card-caption"><?php the_title(); ?></h3>
 		<p class="card-subcaption"><?= $subtitle; ?></p>
 
          <?php if($row_time){ ?>
 		<p class="card-date">שעה: <?php print_R($row_time);?></p>
+        <?php } ?>
+        <p class="card-subcaption"><?= $subtitle; ?></p>
+
+        <?php
+        $currentdate = date('d/m/Y');
+        $date = get_field('date', false, false);
+        $date = new DateTime($date);
+        $date_post = $date->format('d/m/Y');
+        $date_post2 = $date->format('Y-m-d');
+
+        if (strtotime("now") < strtotime($date_post2)) {
+
+            ?>
+            <p class="card-date">שעה: <?php echo $date_post;?></p>
         <?php } ?>
 	</div>
 	<div class="card-side">

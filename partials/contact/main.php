@@ -17,159 +17,159 @@ $sidebar_title = get_field( 'sidebar_title' );
 $waze          = get_field( 'waze' );
 ?>
 <section class="contact-main-wrap">
-	<div class="container container-l">
-		<div class="custom-row">
-			<div class="col8">
+    <div class="container container-l">
+        <div class="custom-row">
+            <div class="col8">
                 <h4 class="entry-subtitle">
                     דברו איתנו
                 </h4>
-				<?php if ( $text ) : ?>
-					<div class="entry-text">
-						<?php echo $text; ?>
-					</div>
-				<?php endif; ?>
-				<hr>
+                <?php if ( $text ) : ?>
+                    <div class="entry-text">
+                        <?php echo $text; ?>
+                    </div>
+                <?php endif; ?>
+                <hr>
 
-				<div class="d-flex">
+                <div class="d-flex">
 
 
-						<?php if ( $kupot ) : ?>
-							<div class="wrap">
-								<h4 class="entry-subtitle">
-									<?php echo $kupot['title']; ?>
-								</h4>
+                    <?php if ( $kupot ) : ?>
+                        <div class="wrap">
+                            <h4 class="entry-subtitle">
+                                <?php echo $kupot['title']; ?>
+                            </h4>
 
-								<ul>
-									<li>
+                            <ul>
+                                <li>
 										<span class="text">
 											<?php echo $kupot['address']; ?>
 										</span>
-									</li>
-									<li>
+                                </li>
+                                <li>
 										<span class="text">
 											<?php _e( 'טלפון: ', 'ystheme' ); ?>
 										</span>
-										<a href="tel:<?php echo $kupot['phone']; ?>">
-											<?php echo $kupot['phone']; ?>
-										</a>
-									</li>
+                                    <a href="tel:<?php echo $kupot['phone']; ?>">
+                                        <?php echo $kupot['phone']; ?>
+                                    </a>
+                                </li>
 
-									<?php if ( $kupot['fax'] ) : ?>
+                                <?php if ( $kupot['fax'] ) : ?>
 
-										<li>
+                                    <li>
 											<span class="text">
 												<?php _e( 'פקס: ', 'ystheme' ); ?>
 											</span>
-											<a href="#">
-												<?php echo $kupot['fax']; ?>
-											</a>
-										</li>
+                                        <a href="#">
+                                            <?php echo $kupot['fax']; ?>
+                                        </a>
+                                    </li>
 
-									<?php endif; ?>
-								</ul>
-							</div>
+                                <?php endif; ?>
+                            </ul>
+                        </div>
 
 
-						<?php endif; ?>
+                    <?php endif; ?>
 
-						<?php if ( $mazkirut ) : ?>
-							<div class="wrap">
-								<h4 class="entry-subtitle">
-									<?php echo $mazkirut['title']; ?>
-								</h4>
+                    <?php if ( $mazkirut ) : ?>
+                        <div class="wrap">
+                            <h4 class="entry-subtitle">
+                                <?php echo $mazkirut['title']; ?>
+                            </h4>
 
-								<ul>
-									<li>
+                            <ul>
+                                <li>
 										<span class="text">
 											<?php _e( 'טלפון: ', 'ystheme' ); ?>
 										</span>
-										<a href="tel:<?php echo $mazkirut['phone']; ?>">
-											<?php echo $mazkirut['phone']; ?>
-										</a>
-									</li>
+                                    <a href="tel:<?php echo $mazkirut['phone']; ?>">
+                                        <?php echo $mazkirut['phone']; ?>
+                                    </a>
+                                </li>
 
-									<?php if ( $mazkirut['fax'] ) : ?>
+                                <?php if ( $mazkirut['fax'] ) : ?>
 
-										<li>
+                                    <li>
 											<span class="text">
 												<?php _e( 'פקס: ', 'ystheme' ); ?>
 											</span>
-											<a href="#">
-												<?php echo $mazkirut['fax']; ?>
-											</a>
-										</li>
+                                        <a href="#">
+                                            <?php echo $mazkirut['fax']; ?>
+                                        </a>
+                                    </li>
 
-									<?php endif; ?>
-								</ul>
-							</div>
-
-
-						<?php endif; ?>
+                                <?php endif; ?>
+                            </ul>
+                        </div>
 
 
-						<?php if ( $hug ) : ?>
-							<div class="wrap">
-								<h4 class="entry-subtitle">
-									<?php echo $hug['title']; ?>
-								</h4>
+                    <?php endif; ?>
 
-								<ul>
-									<li>
+
+                    <?php if ( $hug ) : ?>
+                        <div class="wrap">
+                            <h4 class="entry-subtitle">
+                                <?php echo $hug['title']; ?>
+                            </h4>
+
+                            <ul>
+                                <li>
 										<span class="text">
 											<?php _e( 'טלפון: ', 'ystheme' ); ?>
 										</span>
-										<a href="tel:<?php echo $hug['phone']; ?>">
-											<?php echo $hug['phone_text']; ?>
-										</a>
-									</li>
+                                    <a href="tel:<?php echo $hug['phone']; ?>">
+                                        <?php echo $hug['phone_text']; ?>
+                                    </a>
+                                </li>
 
-									<?php if ( $hug['fax'] ) : ?>
+                                <?php if ( $hug['fax'] ) : ?>
 
-										<li>
+                                    <li>
 											<span class="text">
 												<?php _e( 'פקס: ', 'ystheme' ); ?>
 											</span>
-											<a href="#">
-												<?php echo $hug['fax']; ?>
-											</a>
-										</li>
+                                        <a href="#">
+                                            <?php echo $hug['fax']; ?>
+                                        </a>
+                                    </li>
 
-									<?php endif; ?>
-								</ul>
-							</div>
-
-
-							<?php endif; ?>
+                                <?php endif; ?>
+                            </ul>
+                        </div>
 
 
-				</div>
-<!--				<hr>-->
+                    <?php endif; ?>
 
-				<div class="hide-desktop">
-					<?php if ( $sidebar_title ) : ?>
-						<h2 class="entry-title">
-							<?php echo $sidebar_title; ?>
-						</h2>
-					<?php
 
-					endif;
+                </div>
+                <!--				<hr>-->
 
-					?>
+                <div class="hide-desktop">
+                    <?php if ( $sidebar_title ) : ?>
+                        <h2 class="entry-title">
+                            <?php echo $sidebar_title; ?>
+                        </h2>
+                    <?php
 
-					<?php if ( $waze ) : ?>
-						<a href="<?php echo $waze; ?>" class="waze-btn">
-							<img src="<?php echo THEME_URI . '/images/waze.svg' ?>" alt="waze">
-							<?php _e( 'נווטו עם waze', 'ystheme' ); ?>
-						</a>
-					<?php endif; ?>
+                    endif;
 
-					<?php
-					if ( $iframe ) {
-						echo $iframe;
-					}
-					?>
+                    ?>
 
-				</div>
+                    <?php if ( $waze ) : ?>
+                        <a href="<?php echo $waze; ?>" class="waze-btn">
+                            <img src="<?php echo THEME_URI . '/images/waze.svg' ?>" alt="waze">
+                            <?php _e( 'נווטו עם waze', 'ystheme' ); ?>
+                        </a>
+                    <?php endif; ?>
+
+                    <?php
+                    if ( $iframe ) {
+                        echo $iframe;
+                    }
+                    ?>
+
+                </div>
 
                 <div class="contact-us">
                     <?php if ( $form_title ) : ?>
@@ -181,23 +181,23 @@ $waze          = get_field( 'waze' );
                     <?php echo H::render_cf7( 'form' ); ?>
                 </div>
 
-			</div>
-			<div class="col4 hide-mobile">
+            </div>
+            <div class="col4 hide-mobile">
 
-				<?php if ( $sidebar_title ) : ?>
-					<h2 class="entry-title">
-						<?php echo $sidebar_title; ?>
-					</h2>
-				<?php
-				endif;
+                <?php if ( $sidebar_title ) : ?>
+                    <h2 class="entry-title">
+                        <?php echo $sidebar_title; ?>
+                    </h2>
+                <?php
+                endif;
 
-				if ( $iframe ) {
-					echo $iframe;
-				}
-				?>
+                if ( $iframe ) {
+                    echo $iframe;
+                }
+                ?>
 
 
-			</div>
-		</div>
-	</div>
+            </div>
+        </div>
+    </div>
 </section>

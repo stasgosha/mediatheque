@@ -5,10 +5,10 @@ $orange: #DF561B;
 		.block-container,
 		.container,
 		.wp-block-columns {
-			max-width: 1710px;
+			max-width: 1740px;
 
 			&.container-l {
-				max-width: 1640px;
+				max-width: 1670px;
 			}
 
 			&.container-md {
@@ -96,10 +96,10 @@ $orange: #DF561B;
 		margin-left: 15px;
 	}
 
-	.btn {
-		font-size: 19px;
-		height: 50px;
-	}
+	// .btn {
+	// 	font-size: 19px;
+	// 	height: 50px;
+	// }
 
 	.home {
 		.slider-section {
@@ -115,7 +115,7 @@ $orange: #DF561B;
 }
 @media only screen and (max-width:1380px) {
 	.main-navigation-wrap .main-navigation .menu > li {
-		margin-left: 10px;
+		// margin-left: 10px;
 
 		> a {
 			font-size: 20px;
@@ -1059,6 +1059,8 @@ $orange: #DF561B;
 
 			.social-wrap {
 				display: flex;
+				flex-direction: column;
+				align-items: stretch;
 				border-bottom: 1px solid rgba(175, 223, 219, 0.2);
 				padding: 20px 0;
 				margin-bottom: 20px;

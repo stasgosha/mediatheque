@@ -91,7 +91,7 @@ if ( $query->have_posts() ) :
     </div>
 
     <div class="section-footer">
-        <a href="#" class="btn">לכל הפעילויות</a>
+        <a href="<?php echo get_permalink(2934);?>" class="btn">לכל הפעילויות</a>
     </div>
   </div>
 

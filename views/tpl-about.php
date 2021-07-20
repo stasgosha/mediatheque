@@ -5,9 +5,9 @@
 get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 	<div class="about-text-and-slider-section">
-		<div class="container">
+		<div class="container container-l">
 			<div class="section-inner">
-				<div class="section-content tpg">
+				<div class="section-content content-wrap">
 					<p>הקמת המוזיאון הישראלי לקריקטורה ולקומיקס הינה הגשמת חלום עבור קהילת הקריקטוריסטים והקומיקסאים בישראל. המוזיאון נותן מענה לעשרות אלפי חובבי המדיום, שזוכים כאן למסגרת קבועה של פעילות ענפה בתחום.</p>
 					<p>המוזיאון חושף את המבקרים לאמנות הקריקטורה על רבדיה, הקשריה ואיכויותיה, במטרה לקדם את ההבנה  וההכרה בקיומה ונחיצותה של הקריקטורה ככלי ביקורתי בחברה ואת הקומיקס כסוגה ספרותית בעלת עומק.</p>
 
@@ -25,19 +25,21 @@ get_header(); ?>
 
 					<h3>קישורים שימושיים</h3>
 
-					<a href="#" class="entry-link icon-link">
-						<span class="icon meditech-chevron-left"></span>
-						<span class="text">
-							לתיאום קבוצות וסיורים
-						</span>
-					</a>
+					<div class="links-list">
+						<a href="#" class="entry-link icon-link">
+							<span class="icon meditech-chevron-left"></span>
+							<span class="text">
+								לתיאום קבוצות וסיורים
+							</span>
+						</a>
 
-					<a href="#" class="entry-link icon-link">
-						<span class="icon meditech-chevron-left"></span>
-						<span class="text">
-							ערוץ היוטיוב של המוזיאון
-						</span>
-					</a>
+						<a href="#" class="entry-link icon-link">
+							<span class="icon meditech-chevron-left"></span>
+							<span class="text">
+								ערוץ היוטיוב של המוזיאון
+							</span>
+						</a>
+					</div>
 				</div>
 				<div class="section-slider">
 					<div class="swiper-container images-slider">
@@ -48,46 +50,24 @@ get_header(); ?>
 							<span class="meditech-chevron-right-alt"></span>
 						</div>
 						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<img width="792" height="455" src="https://dev.lm-studio.co.il/childmuseum/wp-content/uploads/2021/06/image-3885.jpeg" class="attachment-full size-full" alt="" />
-							</div>
-							<div class="swiper-slide">
-								<img width="516" height="273" src="https://dev.lm-studio.co.il/childmuseum/wp-content/uploads/2021/06/image-3879.jpeg" class="attachment-full size-full" alt="" />
-							</div>
-							<div class="swiper-slide">
-								<img width="516" height="273" src="https://dev.lm-studio.co.il/childmuseum/wp-content/uploads/2021/06/image-3898.jpeg" class="attachment-full size-full" alt="" />
-							</div>
-							<div class="swiper-slide">
-								<img width="568" height="301" src="https://dev.lm-studio.co.il/childmuseum/wp-content/uploads/2021/05/Mask-Group2.jpeg" class="attachment-full size-full" alt="" />
-							</div>
-							<div class="swiper-slide">
-								<img width="568" height="301" src="https://dev.lm-studio.co.il/childmuseum/wp-content/uploads/2021/05/image-3885.jpeg" class="attachment-full size-full" alt="" />
-							</div>
-							<div class="swiper-slide">
-								<img width="516" height="273" src="https://dev.lm-studio.co.il/childmuseum/wp-content/uploads/2021/06/image-3882.jpeg" class="attachment-full size-full" alt="" />
-							</div>
+                            <?php $slider=get_field('gallery');
+                            if($slider){
+                                foreach ($slider as  $value){?>
+                                    <div class="swiper-slide">
+                                        <img width="792" height="455" src="<?php print_R($value['url']);?>" class="attachment-full size-full" alt="" />
+                                    </div>
+                                <?php } } ?>
 						</div>
 					</div>
 					<div class="swiper-container thumbs-slider">
 						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<img width="300" height="172" src="https://dev.lm-studio.co.il/childmuseum/wp-content/uploads/2021/06/image-3885-300x172.jpeg" class="attachment-medium size-medium" alt="" />
-							</div>
-							<div class="swiper-slide">
-								<img width="300" height="159" src="https://dev.lm-studio.co.il/childmuseum/wp-content/uploads/2021/06/image-3879-300x159.jpeg" class="attachment-medium size-medium" alt="" />
-							</div>
-							<div class="swiper-slide">
-								<img width="300" height="159" src="https://dev.lm-studio.co.il/childmuseum/wp-content/uploads/2021/06/image-3898-300x159.jpeg" class="attachment-medium size-medium" alt="" />
-							</div>
-							<div class="swiper-slide">
-								<img width="300" height="159" src="https://dev.lm-studio.co.il/childmuseum/wp-content/uploads/2021/05/Mask-Group2-300x159.jpeg" class="attachment-medium size-medium" alt="" />
-							</div>
-							<div class="swiper-slide">
-								<img width="300" height="159" src="https://dev.lm-studio.co.il/childmuseum/wp-content/uploads/2021/05/image-3885-300x159.jpeg" class="attachment-medium size-medium" alt="" />
-							</div>
-							<div class="swiper-slide">
-								<img width="300" height="159" src="https://dev.lm-studio.co.il/childmuseum/wp-content/uploads/2021/06/image-3882-300x159.jpeg" class="attachment-medium size-medium" alt="" />
-							</div>
+                            <?php $slider=get_field('gallery');
+                            if($slider){
+                                foreach ($slider as  $value){?>
+                                    <div class="swiper-slide">
+                                        <img  width="300" height="172"  src="<?php print_R($value['sizes']['search-result-item']);?>" class="attachment-full size-medium" alt="" />
+                                    </div>
+                                <?php } } ?>
 						</div>
 					</div>
 				</div>
@@ -101,54 +81,49 @@ get_header(); ?>
 		<div class="container container-sm">
 			<div class="title-wrap">
 				<h2 class="entry-title text-center">
-					שאלות נפוצות 
+					<?php echo get_field('faq_title');?>>
 				</h2>
 			</div>
 			<div class="qa-wrap">
-				<div class="qa-item post-3062 mt_qa type-mt_qa status-publish hentry" id="qa-3062">
-					<div class="entry-header">
-						<h4 class="entry-title">
-							מהן שעות הפתיחה של המוזיאון?	
-						</h4>
-						<span class="meditech-plus icon"></span>
-					</div>
-					<div class="entry-body">
-						<p>במוזיאון העיצוב חולון שתי גלריות.<br />
-							במוזיאון מוצגות כשלוש תערוכות מתחלפות בשנה הכוללות גם תצוגות מתוך האוסף. בנוסף, ניתן לבקר בגלריית מבנה המוזיאון )גלריית מרגלית( ולצפות בתהליך בניית המוזיאון וכן לסייר במבנה המוזיאון עצמו.
-						</p>
-					</div>
-				</div>
-				<div class="qa-item post-3060 mt_qa type-mt_qa status-publish hentry" id="qa-3060">
-					<div class="entry-header">
-						<h4 class="entry-title">
-							האם המוזיאון מיועד לילדים?
-						</h4>
-						<span class="meditech-plus icon"></span>
-					</div>
-					<div class="entry-body">
-						<p>במוזיאון העיצוב חולון שתי גלריות.<br />
-							במוזיאון מוצגות כשלוש תערוכות מתחלפות בשנה הכוללות גם תצוגות מתוך האוסף. בנוסף, ניתן לבקר בגלריית מבנה המוזיאון )גלריית מרגלית( ולצפות בתהליך בניית המוזיאון וכן לסייר במבנה המוזיאון עצמו.
-						</p>
-					</div>
-				</div>
-				<div class="qa-item post-3058 mt_qa type-mt_qa status-publish hentry" id="qa-3058">
-					<div class="entry-header">
-						<h4 class="entry-title">
-							מה רואים במוזיאון?	
-						</h4>
-						<span class="meditech-plus icon"></span>
-					</div>
-					<div class="entry-body">
-						<p>במוזיאון העיצוב חולון שתי גלריות.<br />
-							במוזיאון מוצגות כשלוש תערוכות מתחלפות בשנה הכוללות גם תצוגות מתוך האוסף. בנוסף, ניתן לבקר בגלריית מבנה המוזיאון )גלריית מרגלית( ולצפות בתהליך בניית המוזיאון וכן לסייר במבנה המוזיאון עצמו.
-						</p>
-					</div>
-				</div>
+                <?php if( have_rows('faq') ): ?>
+                    <?php
+                    $i=0;
+                    while( have_rows('faq') ): the_row(); ?>
+                        <div class="qa-item post-3062 mt_qa type-mt_qa status-publish hentry">
+                            <div class="entry-header">
+                                <h4 class="entry-title">
+                                    <?php echo get_sub_field('title');?>
+                                </h4>
+                                <span class="meditech-plus icon"></span>
+                            </div>
+                            <div class="entry-body">
+                                <p><?php echo get_sub_field('text');?></p>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
 			</div>
 		</div>
 	</div>
 
-	
+	<div class="block block-instagram">
+		<div class="container container-l">
+			<div class="title-wrap">
+				<h2 class="entry-title text-center">
+					<?php echo get_field('instagram_title');?>
+				</h2>
+
+				<p class="entry-text eng-text">
+					<?php echo get_field('instagram_nicname');?>
+				</p>
+			</div>
+
+			<div class="ig-wrap">
+				<?php echo do_shortcode(get_field('instagram_shortcode'));?>
+			</div>
+		</div>
+	</div>
+
 
 	<div class="block block-iframe-banner">
 		<div class="container container-l">
@@ -156,16 +131,16 @@ get_header(); ?>
 				<div class="col4 col-content">
 					<div class="title-wrap">
 						<h2 class="entry-title">
-							מתנות מולטי שוות
+							<?php echo get_field('iframe_title');?>
 						</h2>
 
 						<div class="entry-text">
-							לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית נולום ארווס סאפיאן &#8211; פוסיליס קוויס, אקווזמן קוואזי במר מודוף.
+							<?php echo get_field('iframe_texz');?>
 						</div>
 					</div>
 				</div>
 				<div class="col8">
-					<iframe src="https://buyme.co.il/supplier/2032521"></iframe>
+					<?php echo get_field('iframe');?>
 				</div>
 			</div>
 		</div>

@@ -1,0 +1,22 @@
+.about-text-and-slider-section{
+	padding: 100px 0;
+
+	.section-inner{
+		display: grid;
+		grid-template-columns: 1fr 42.6%;
+		grid-gap: 100px;
+
+		@media screen and (max-width: 1599px){
+			grid-gap: 50px;
+		}
+
+		@media screen and (max-width: 991px){
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.links-list{
+		display: grid;
+		grid-gap: 12px;
+	}
+}

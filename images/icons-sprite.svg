@@ -1,0 +1,13 @@
+<svg width="0" height="0" class="hidden">
+
+	<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" id="tick"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 9a7 7 0 1114 0A7 7 0 012 9zm7-9a9 9 0 100 18A9 9 0 009 0zm3.92 5.65l1.44 1.4-6.51 6.3-4.21-4.07 1.44-1.4 2.77 2.67 5.07-4.9z"/></symbol>
+
+	<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 18" id="calendar"><path fill-rule="evenodd" clip-rule="evenodd" d="M13 2h1a2 2 0 012 2v12a2 2 0 01-2 2H2a2 2 0 01-2-2L.01 4A2 2 0 012 2h1V0h2v2h6V0h2v2zM2 16h12V7H2v9zm2-5V9h2v2H4z"/></symbol>
+
+	<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" id="price"><path d="M20 6V2a2 2 0 00-2-2H2A2 2 0 00.01 2v4A2 2 0 010 10v4c0 1.1.9 2 2 2h16a2 2 0 002-2v-4a2 2 0 01-2-2c0-1.1.9-2 2-2zm-2-1.46c-1.19.69-2 1.99-2 3.46s.81 2.77 2 3.46V14H2v-2.54a4.01 4.01 0 00.01-6.92L2 2h16v2.54zM12 11h2v2h-2v-2zm0-4h2v2h-2V7zm0-4h2v2h-2V3z"/></symbol>
+
+	<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" id="clock"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 9a7 7 0 1114 0A7 7 0 012 9zm7-9a9 9 0 100 18A9 9 0 009 0zM8 4h1.5v5.25l3.5 1.67-.75 1.23L8 10V4z"/></symbol>
+
+	<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" id="age"><path d="M6.3 8.78a1.13 1.13 0 100 2.25 1.13 1.13 0 000-2.25zm5.4 0a1.13 1.13 0 100 2.25 1.13 1.13 0 000-2.25zM9 0a9 9 0 100 18A9 9 0 009 0zm0 16.2a7.21 7.21 0 01-7.16-7.97 9.06 9.06 0 004.7-4.84 8.98 8.98 0 009.36 3.58A7.17 7.17 0 019 16.2z"/></symbol>
+
+</svg>

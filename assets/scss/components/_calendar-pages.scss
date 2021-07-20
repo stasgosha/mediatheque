@@ -1,12 +1,23 @@
 .entry-result{
-	.results-grid{
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		grid-gap: 50px;
+	
+}
 
-		@media screen and (max-width: 1599px){
-			grid-template-columns: repeat(3, 1fr);
-		}
+.results-grid{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 50px;
+
+	@media screen and (max-width: 1599px){
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	@media screen and (max-width: 1199px){
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 24px;
+	}
+
+	@media screen and (max-width: 767px){
+		grid-template-columns: 1fr;
 	}
 }
 
@@ -16,7 +27,7 @@
 	grid-gap: 6px;
 	font-family: $second-font;
 	width: 100%;
-	max-width: 390px;
+	// max-width: 440px;
 
 	.card-main{
 		background: #fff;
@@ -55,13 +66,36 @@
 	.card-subcaption{
 		font-size: 19px;
 		line-height: 1.2;
+
+		+ .card-subcaption{
+			display: none;
+		}
+	}
+
+	.card-date{
+		font-size: 19px;
+		line-height: 1;
+		color: $primary;
+		margin-top: 15px;
+		display: flex;
+		align-items: center;
+
+		&:before{
+			content: '';
+			display: block;
+			background: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 9a7 7 0 1114 0A7 7 0 012 9zm7-9a9 9 0 100 18A9 9 0 009 0zM8 4h1.5v5.25l3.5 1.67-.75 1.23L8 10V4z' fill='%230348F4'/%3E%3C/svg%3E") no-repeat center center / contain;
+			width: 18px;
+			height: 18px;
+			flex: none;
+			margin-left: 9px;
+		}
 	}
 
 	.card-side{}
 
 	.card-image{
 		margin-bottom: -16px;
-		width: 185px;
+		width: 100%;
 	}
 
 	.card-button{
@@ -89,6 +123,42 @@
 			background: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 14'%3E%3Cpath d='M9 1.73L3 7.21l6 5.48' stroke='%23fff' stroke-width='3'/%3E%3C/svg%3E") no-repeat center center / contain;
 			width: 11px;
 			height: 14px;
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		grid-template-columns: 1fr 168px;
+		grid-gap: 5px;
+
+		.card-main{
+			padding: 24px 16px;
+		}
+
+		.card-caption{
+			font-size: 26px;
+			line-height: 1;
+		}
+
+		.card-category{
+			font-size: 18px;
+			line-height: 1.1;
+			margin-bottom: 8px;
+			padding-bottom: 16px;
+		}
+
+		.card-subcaption{
+			font-size: 17px;
+			line-height: 1.3;
+		}
+
+		.card-button{
+			width: 168px;
+			height: 62px;
+			font-size: 18px;
+		}
+
+		.card-date{
+			font-size: 17px;
 		}
 	}
 }

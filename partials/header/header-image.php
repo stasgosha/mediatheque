@@ -1,15 +1,6 @@
 <?php
 if ( ! class_exists( 'H' ) ) {
-    return;
-}
-
-if ( is_tax() ) {
-    $term   = get_queried_object();
-    $design = get_field( 'header_design', $term );
-    $color  = get_field( 'header_color', $term );
-} else {
-    $design = get_field( 'header_design' );
-    $color  = get_field( 'header_color' );
+	return;
 }
 
 $mobile_banner_title = get_field( 'mobile_banner_title' );
@@ -18,10 +9,22 @@ if ( wp_is_mobile() && $mobile_banner_title ) {
     $banner_title = $mobile_banner_title;
 }
 
-if ( ! is_singular( 'mt_article' ) ) :
-    ?>
 
-    <!-- <div class="header-image <?php echo $color; ?>">
+if ( is_tax() ) {
+    $banner_title=single_term_title('',0);
+
+	$design = get_field( 'header_design', $term );
+	$color  = get_field( 'header_color', $term );
+} else {
+	$design = get_field( 'header_design' );
+	$color  = get_field( 'header_color' );
+}
+
+
+if ( ! is_singular( 'mt_article' ) ) :
+	?>
+
+<!-- <div class="header-image <?php echo $color; ?>">
 	<?php if ( ! is_singular( 'mt_event' ) ) : ?>
 
 		<div class="bg-wrap" data-design="<?php echo esc_html( $design ); ?>">
@@ -56,11 +59,11 @@ if ( ! is_singular( 'mt_article' ) ) :
 
 		</div>
 		<?php
-    else :
-        $ages                    = get_field( 'ages', get_the_ID() );
-        $type                    = get_field( 'type', get_the_ID() );
-        $mobile_video_youtube_id = get_field( 'mobile_video_youtube_id', get_the_ID() );
-        ?>
+	else :
+		$ages                    = get_field( 'ages', get_the_ID() );
+		$type                    = get_field( 'type', get_the_ID() );
+		$mobile_video_youtube_id = get_field( 'mobile_video_youtube_id', get_the_ID() );
+		?>
 
 	<?php if ( wp_is_mobile() && isset( $mobile_video_youtube_id ) && $mobile_video_youtube_id ) : ?>
 		<div class="mobile-video-play-button">
@@ -105,7 +108,32 @@ if ( ! is_singular( 'mt_article' ) ) :
 
 </div> -->
 
-<div class="page-header-section" style="--corner-color: <?php echo get_field('color');?>; background-image: url(<?= get_template_directory_uri(); ?>/images/about-page-header-bg.svg);">
+<?php
+if(is_tax()){
+    $queried_object = get_queried_object();
+    $active = get_queried_object()->term_id;
+    $parrent = get_queried_object()->parent;
+    $taxonomy=$queried_object->taxonomy;
+    $option=$taxonomy.'_'.$active;
+}else{
+    $option=get_the_ID();
+}
+if(get_field('image_header',$option)){
+    $image=get_field('image_header',$option)['url'];
+
+}else{
+    $image =get_template_directory_uri().'/images/about-page-header-bg.svg';
+}
+if(wp_is_mobile() and get_field('image_header_mobile',$option)){
+    $image=get_field('image_header_mobile',$option)['url'];
+}
+$color=get_field('color',$option);
+if(!$color){
+    $color='#00B0CD';
+}
+
+?>
+<div class="page-header-section" style="--corner-color: <?php echo $color;?>; background-image: url(<?= $image; ?>);">
 	<div class="container container-l">
 		<div class="section-inner">
 			<?php yoast_breadcrumb( '<div class="breadcrumbs">', '</div>' ); ?>
@@ -115,9 +143,9 @@ if ( ! is_singular( 'mt_article' ) ) :
 	</div>
 </div>
 
-<?php if (is_category()) { ?>
+<?php if (is_category() or is_tax()) { ?>
     <div class="cat-description">
-        <?php echo category_description(); ?>
+        <?php echo term_description(); ?>
     </div>
 <?php } ?>
 

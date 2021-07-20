@@ -8,13 +8,19 @@
 	background-position: left center;
 	color: #fff;
 
+	.page-template-tpl-exhibition &,
+	.single-mt_exhibition &{
+		display: none;
+	}
+
 	&:after{
 		content: '';
 		display: block;
 		width: 122px;
 		height: 122px;
 		border-radius: 50%;
-		background: var(--corner-color);
+		background: var(--corner-color, #00B0CD);
+		// background: #00B0CD;
 		position: absolute;
 		right: 138px;
 		bottom: -39px;
@@ -34,5 +40,23 @@
 		line-height: 1.1;
 		color: inherit;
 		margin-bottom: 0;
+	}
+
+	@media screen and (max-width: 991px){
+		min-height: 120px;
+		padding: 20px 0;
+		margin-bottom: 45px;
+
+		&:after{
+			width: 76px;
+			height: 76px;
+			right: 39px;
+			bottom: -30px;
+		}
+
+		.page-caption{
+			font-size: 34px;
+			margin-top: 4px;
+		}
 	}
 }
