@@ -10,7 +10,7 @@ $current  = get_the_ID();
 
 $args = array(
     'post_type'      => array( 'mt_event' ),
-    'posts_per_page' => 10,
+    'posts_per_page' => 4,
     'post__not_in'   => array( $current ),
 );
 
@@ -62,32 +62,18 @@ if ( $query->have_posts() ) :
 
     <?php endif; ?>
 
-    <div class="swiper-section">
-        <div class="button-next">
-            <span class="meditech-chevron-left-alt"></span>
-        </div>
-        <div class="button-prev">
-            <span class="meditech-chevron-right-alt"></span>
-        </div>
-        <div class="swiper-container related-slider">
-
-          <div class="swiper-wrapper">
-            <?php
-            while ( $query->have_posts() ) :
-                $query->the_post();
-                ?>
-              <div class="swiper-slide">
-                <?php get_template_part( 'partials/loop', 'activity' ); ?>
-              </div>
-            <?php
-            endwhile;
-            wp_reset_postdata();
+    <div class="section-grid">
+        <?php
+        while ( $query->have_posts() ) :
+            $query->the_post();
             ?>
-
+          <div class="item">
+            <?php get_template_part( 'partials/loop', 'activity' ); ?>
           </div>
-
-        </div>
-        <div class="swiper-pagination hide-desktop"></div>
+        <?php
+        endwhile;
+        wp_reset_postdata();
+        ?>
     </div>
 
     <div class="section-footer">

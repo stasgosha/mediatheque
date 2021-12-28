@@ -8460,9 +8460,9 @@ hr {
   .related-exhibitions,
 .related-section {
     position: relative;
-    background: transparent;
+    /* background: transparent; */
   }
-  .related-exhibitions:before, .related-exhibitions:after,
+
 .related-section:before,
 .related-section:after {
     content: "";
@@ -10125,7 +10125,7 @@ hr {
 }
 @media only screen and (max-width: 1023px) {
   .archive.category .site-content {
-    padding: 0 20px;
+    padding: 0 5px;
   }
 }
 

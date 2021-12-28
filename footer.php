@@ -8,7 +8,7 @@ $video_s = get_field( 'mobile_video', 'option' );
 	<?php get_template_part( 'partials/global/site', 'banner' ); ?>
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="container">
+		<div class="container container-l">
 
 			<?php
 			get_template_part( 'partials/footer/footer-top' );
@@ -20,7 +20,7 @@ $video_s = get_field( 'mobile_video', 'option' );
 	</footer>
 
 	<button class="sticky-btn buy-now-btn">
-		<div class="btn-text">כרטיסים  <br>רכישת</div>
+		<div class="btn-text"><?php echo get_field('button_cart_footer','option');?></div>
 	</button>
 
 	<?php if ( $video_l && $video_s ) : ?>

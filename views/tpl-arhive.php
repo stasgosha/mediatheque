@@ -72,6 +72,12 @@ get_header();
 			?>
 		</div>
 
+        <?php if(get_sub_field('link_button')){ ?>
+			<div class="archive-mobile-footer">
+        	    <a href="<?php echo get_sub_field('link_button');?>" class="btn btn-small"><?php echo get_sub_field('text_link');?></a>
+			</div>
+        <?php } ?>
+
 		<?php // get_template_part( 'pagination' ); ?>
 	</div>
 

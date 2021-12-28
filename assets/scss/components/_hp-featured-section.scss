@@ -30,6 +30,18 @@
 			}
 		}
 	}
+
+	@media screen and (max-width: 991px){
+		padding: 43px 0 50px;
+
+		.section-caption{
+			margin-bottom: 45px;
+		}
+
+		.section-footer{
+			margin-top: 50px;
+		}
+	}
 }
 
 .hp-featured-card{
@@ -115,6 +127,24 @@
 		.btn-text{
 			position: relative;
 			z-index: 2;
+			display: flex;
+			align-items: center;
+		}
+
+		.btn-icon{
+			width: 10px;
+			height: 14px;
+			flex: none;
+			fill: var(--card-theme-color);
+			display: block;
+			position: relative;
+			z-index: 2;
+			margin-right: 9px;
+
+			@media screen and (max-width: 991px){
+				width: 8px;
+				height: 10px;
+			}
 		}
 
 		&:hover,

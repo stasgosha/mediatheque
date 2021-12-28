@@ -23,12 +23,12 @@
 }
 
 
-.light-theme {
+html .light-theme {
   --bgColor: var(---bgColor);
   --fontColor: var(--text);
 }
 
-.dark-theme {
+html .dark-theme {
   --whiteBtn: var(--darkBlue2);
   --bgColor: var( --black );
   --text:  var(--white);
@@ -172,7 +172,7 @@ form input[type="text"]::placeholder, form input[type="tel"]::placeholder, form 
     border-color: var( --darkBlue);
 }
 .home .banner-section .entry-title, .home .title-wrap .entry-title,
-.header-image .header-image-content .entry-title,
+.header-image .header-image-content .entry-title
 {
     color: var( --homeTitleColor);
 }

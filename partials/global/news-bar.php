@@ -38,9 +38,9 @@ if ( $query->have_posts() ) {
 <div class="news-bar-wrap">
 
 	<div class="acme-news-ticker">
-		<div class="acme-news-ticker-label">
+		<!-- <div class="acme-news-ticker-label">
 			<?php esc_html_e( 'חדשות', 'ystheme' ); ?>
-		</div>
+		</div> -->
 
 		<div class="acme-news-ticker-box">
 			<ul class="news-bar-ticker">

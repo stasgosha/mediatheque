@@ -12,8 +12,17 @@ $search_query = get_search_query();
 $is_search    = true;
 ?>
 
-<div class="container container-l">
+    <div class="container container-l">
+
+    <div class=" searchsection">
+        <div class="section-inner">
+            <?php yoast_breadcrumb( '<div class="breadcrumbs">', '</div>' ); ?>
+        </div>
+    </div>
+
+
 	<div class="custom-row row-results">
+
 		<div class="col12">
 			<div class="search-header-wrap">
 				<h2 class="search-title">
@@ -44,9 +53,10 @@ $is_search    = true;
 						the_post();
 						get_template_part( 'partials/loop-article', 'wide' );
 					}
-				} else {
-					esc_html_e( 'Sorry, no posts found.', 'ystheme' );
-				}
+				} 
+				// else {
+				// 	esc_html_e( 'Sorry, no posts found.', 'ystheme' );
+				// }
 				?>
 			</div>
 

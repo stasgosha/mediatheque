@@ -1,9 +1,11 @@
 <?php
 /**
  * Theme functions and definitions.
+ *
+ * @package WordPress
  */
 
-// Exit if accessed directly
+// Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
 /**
@@ -16,9 +18,9 @@ define( 'THEME_VER', wp_get_theme()->get( 'Version' ) );
 /**
  * Includes
  */
-get_template_part( 'classes/class', 'h' );                      // Helper class
-get_template_part( 'classes/class', 'mobile-menu-walker' );     // Mobile Menu Walker
-
+get_template_part( 'classes/class', 'h' );                      // Helper class.
+get_template_part( 'classes/class', 'mobile-menu-walker' );     // Mobile Menu Walker.
+get_template_part( 'admin/ajax' );
 /**
  * Post Thumbnail Support
  */
@@ -41,12 +43,20 @@ function ystheme_theme_support() {
 	add_image_size( 'slider-images', 500, 500, true );
 	add_image_size( 'small', 200, 200, false );
 	add_image_size( 'search-result-item', 276, 149, true );
+	add_image_size( 'search-result', 185, 245, true );
+	add_image_size( 'product', 140, 204, true );
 }
 add_action( 'after_setup_theme', 'ystheme_theme_support' );
+add_filter( 'body_class', 'my_body_classes' );
+function my_body_classes( $classes ) {
+	if ( is_tax() ) {
+		$classes[] = 'archive category';
+	}
+	return $classes;
 
+}
 /**
  * Enqueue Assets
- *
  */
 function ystheme_enqueue_assets() {
 	// Assets - CSS
@@ -59,6 +69,7 @@ function ystheme_enqueue_assets() {
 	wp_enqueue_style( 'swiper', THEME_URI . '/assets/css/swiper-bundle.css', array(), THEME_VER );
 	wp_enqueue_style( 'slick', THEME_URI . '/assets/css/slick.min.css', array(), THEME_VER );
 	wp_enqueue_style( 'slick-theme', THEME_URI . '/assets/css/slick-theme.min.css', array(), THEME_VER );
+	wp_enqueue_style( 'theme', THEME_URI . '/style.css', array(), THEME_VER );
 
 	// Assets - JS
 	wp_dequeue_script( 'moment' );
@@ -93,12 +104,10 @@ function ystheme_scripts_and_styles() {
 	// wp_enqueue_style( 'dark-mode', THEME_URI . '/build/css/dark-mode.css', array(), THEME_VER );
 
 	if ( is_page_template( 'views/tpl-event-tours.php' ) ) {
-
 		wp_enqueue_script( 'calendar', THEME_URI . '/build/js/events-calendar.js', array( 'jquery' ), THEME_VER, true );
-
 	}
 
-	wp_enqueue_script( 'scripts', THEME_URI . '/build/js/scripts.js?v=5', array(), THEME_VER, true );
+	wp_enqueue_script( 'scripts', THEME_URI . '/build/js/scripts.js', array( 'jquery' ), THEME_VER . '-v-' . time(), true );
 
 	$google_maps_api_key = get_field( 'google_maps_api_key', 'option' );
 
@@ -280,15 +289,15 @@ function ystheme_wp_head_css() {
 	if ( ! is_singular( 'mt_event' ) ) {
 		return;
 	}
-	$header_image            = get_field( 'header_image' );
-	$header_image_mobile     = get_field( 'header_image_mobile' );
+	$header_image        = get_field( 'header_image' );
+	$header_image_mobile = get_field( 'header_image_mobile' );
 
 	if ( is_search() ) {
 		$header_image = H::mega_get_field( 'search_bg' );
 	}
 	$header_image_url        = ! empty( $header_image ) ? $header_image['url'] : '';
 	$header_image_mobile_url = ! empty( $header_image_mobile ) ? $header_image_mobile['url'] : '';
-	if( wp_is_mobile() && $header_image_mobile_url ) {
+	if ( wp_is_mobile() && $header_image_mobile_url ) {
 		$header_image_url = $header_image_mobile_url;
 	}
 	?>
@@ -337,7 +346,7 @@ function ystheme_wp_head_css() {
 							'padding',
 							'background-color',
 						);
-						//block_603f7d51dcccb
+						// block_603f7d51dcccb
 						foreach ( $properties as $property ) {
 							if ( isset( $block['data'][ $resolution . '_' . $property ] ) && ( $block['data'][ $resolution . '_' . $property ] || '0' === $block['data'][ $resolution . '_' . $property ] ) ) {
 								$css .= $property . ':' . $block['data'][ $resolution . '_' . $property ] . ';';
@@ -385,7 +394,7 @@ add_action( 'wp_before_admin_bar_render', 'ys_remove_comments_admin_bar' );
  * Disable Gutenberg for pages
  */
 function ystheme_disable_gutenberg() {
-	//add_filter( 'use_block_editor_for_post', '__return_false', 10 );
+	// add_filter( 'use_block_editor_for_post', '__return_false', 10 );
 }
 add_action( 'current_screen', 'ystheme_disable_gutenberg' );
 
@@ -661,9 +670,9 @@ add_action( 'wp_ajax_ajax_load_more', 'ajax_load_more' );
  */
 function ajax_login() {
 	$data = $_POST['data'];
-	//check_ajax_referer( -1, 'nonce' );
+	// check_ajax_referer( -1, 'nonce' );
 
-	//parse_str( $_POST['data'], $data );
+	// parse_str( $_POST['data'], $data );
 
 	if ( is_email( $data['username'] ) ) {
 		$info['user_login'] = get_user_by( 'email', $data['email'] );
@@ -727,34 +736,33 @@ add_action( 'wp_ajax_get_events', 'get_events' );
 function events_query_by_day( $date, $year, $week ) {
 
 	ob_start();
-
+	global $row_time;
 	$days = array();
 	$html = '';
 	for ( $i = 0; $i <= 6; $i++ ) {
 		$ts       = strtotime( $date . ' +' . $i . ' day' );
 		$day_num  = gmdate( 'j', $ts );
-		$day_text = date_i18n( 'l,j M Y', $ts );
+		$day_text = date_i18n( 'l ,j F Y', $ts );
 		$days[]   = array(
 			'num'  => $day_num,
 			'text' => $day_text,
 			'time' => $ts,
 		);
 	}
-
 	foreach ( $days as $key => $day ) {
 		$loop_date = gmdate( 'Ymd', $day['time'] );
 
 		$args = array(
-			'post_type'      => array( 'mt_event' ),
+			'post_type'      => array( 'mt_event', 'mt_exhibition' ),
 			'posts_per_page' => -1,
 			'post_status'    => 'publish',
-			'meta_query'	 => array(
+			'meta_query'     => array(
 				array(
-					'key'	=> 'event_display_dates_$_ActualEventDate',
+					'key'   => 'event_display_dates_$_ActualEventDate',
 					'type'  => 'DATE',
-					'value'	=> gmdate( 'Ymd', $day['time'] ),
+					'value' => gmdate( 'Ymd', $day['time'] ),
 				),
-			)
+			),
 
 		);
 
@@ -762,7 +770,7 @@ function events_query_by_day( $date, $year, $week ) {
 		?>
 		<div class="entry-result <?php echo 0 !== $key ? 'hide-mobile' : ''; ?>" data-day="<?php echo $day['num']; ?>" id="day-<?php echo $key + 1; ?>">
 
-			<?php if ( $query->have_posts() ) : ?>
+			<?php if ( $query->have_posts() ) { ?>
 
 			<div class="entry-header">
 				<h2 class="entry-day-title">
@@ -783,13 +791,14 @@ function events_query_by_day( $date, $year, $week ) {
 						$query->the_post();
 						$show = false;
 
-						$dates = get_field( 'event_display_dates' );
+						$dates     = get_field( 'event_display_dates' );
 						$loop_date = gmdate( 'Y-m-d', $day['time'] );
 
 						if ( $dates ) {
 							foreach ( $dates as $date ) {
 
 								$row_date = gmdate( 'Y-m-d', strtotime( $date['ActualEventDate'] ) );
+								$row_time = gmdate( 'H:i', strtotime( $date['ActualEventDate'] ) );
 
 								if ( $row_date === $loop_date ) {
 									$show      = true;
@@ -810,7 +819,7 @@ function events_query_by_day( $date, $year, $week ) {
 
 				</div>
 			</div>
-			<?php else : ?>
+			<?php } else { ?>
 			<div class="entry-header">
 				<h2 class="entry-day-title">
 					<span class="icon meditech-no-calander"></span>
@@ -818,11 +827,14 @@ function events_query_by_day( $date, $year, $week ) {
 						<?php echo $day['text']; ?>
 					</span>
 				</h2>
-				<span class="no-posts">
-					<?php _e( 'אין אירועים להצגה במועד זה.', 'ystheme' ); ?>
-				</span>
 			</div>
-		<?php endif; ?>
+				<div class="entry-body">
+					<div class="results-grid no-rezult">
+						<?php _e( 'אין אירועים להצגה במועד זה.', 'ystheme' ); ?>
+
+					</div>
+				</div>
+		<?php } ?>
 		</div>
 		<?php
 
@@ -847,7 +859,7 @@ function get_calendar_item( $day_num, $day_text, $active ) {
  * Render block by device
  *
  * @param string $block_content The block content about to be appended.
- * @param array $block The full block, including name and attributes.
+ * @param array  $block The full block, including name and attributes.
  * @return void
  */
 function render_block_by_device( $block_content, $block ) {
@@ -898,51 +910,52 @@ function get_months() {
 
 function event_filter_by_repatear_dates( $where ) {
 
-	$where = str_replace( "meta_key = 'event_display_dates_$", "meta_key LIKE 'event_display_dates_%", $where);
+	$where = str_replace( "meta_key = 'event_display_dates_$", "meta_key LIKE 'event_display_dates_%", $where );
 
 	return $where;
 }
 
-add_filter('posts_where', 'event_filter_by_repatear_dates');
-
+add_filter( 'posts_where', 'event_filter_by_repatear_dates' );
 
 add_action( 'init', 'hide_admin_bar_homepage' );
-
 function hide_admin_bar_homepage() {
 	if ( is_front_page() ) {
-		add_filter( 'show_admin_bar', '__return_false' );
+		// add_filter( 'show_admin_bar', '__return_false' );
 	}
 }
 
+// Global remove admin bar.
+add_filter( 'show_admin_bar', '__return_false' );
 
 function render_btn( $text, $class = false, $link = false ) {
- ?>
- <a class="hover-flip-item-wrapper <?php echo $class ? $class : ''; ?>" href="<?php echo $link ? $link : '#'; ?>">
-	 <span class="hover-flip-item">
-		 <span data-text="<?php echo $text; ?>">
-			 <?php echo $text; ?>
-		 </span>
-	 </span>
-	 <span class="icon">
-		 <span class="meditech-arrow-left"></span>
-		 <span class="meditech-arrow-left clone"></span>
-	 </span>
- </a>
- <?php
+	?>
+	<a class="hover-flip-item-wrapper <?php echo $class ? $class : ''; ?>" href="<?php echo $link ? $link : '#'; ?>">
+		<span class="hover-flip-item">
+			<span data-text="<?php echo $text; ?>">
+				<?php echo $text; ?>
+			</span>
+		</span>
+		<span class="icon">
+			<span class="meditech-arrow-left"></span>
+			<span class="meditech-arrow-left clone"></span>
+		</span>
+	</a>
+	<?php
 }
 
 
 
 function limit_search_results( $query ) {
-    if ( $query->is_main_query() && $query->is_search() && ! is_admin() ) {
-        $query->set( 'posts_per_page', 5 );
-    }
+	if ( $query->is_main_query() && $query->is_search() && ! is_admin() ) {
+		$query->set( 'posts_per_page', 5 );
+	}
 }
 add_action( 'pre_get_posts', 'limit_search_results' );
 
 
 /**
  * print_svg - Print SVG
+ *
  * @param  string $path svg url
  * @return string svg image
  */
@@ -956,4 +969,38 @@ function print_svg( $path ) {
 
 
 /* Disable WordPress Admin Bar for all users */
-add_filter( 'show_admin_bar', '__return_false' );
+if ( ! current_user_can( 'administrator' ) ) {
+	add_filter( 'show_admin_bar', '__return_false' );
+}
+
+
+
+function loadmore_get_posts() {
+	$id    = $_POST['query'];
+	$posts = get_field( 'mag_posts', $id );
+	$args  = array(
+		'post_type' => array(
+			'post',
+			'mt_article',
+		),
+	);
+
+	$args['post__not_in']   = $posts;
+	$args['posts_per_page'] = 20;
+	$args['paged']          = $_POST['page'] + 1;
+	unset( $args['post__in'] );
+	$query = new WP_Query( $args );
+	if ( $query->have_posts() ) {
+		while ( $query->have_posts() ) {
+			$query->the_post();
+			get_template_part( 'partials/loop', 'article' );
+		}
+		wp_reset_postdata();
+	}
+	die();
+}
+
+add_action( 'wp_ajax_loadmore', 'loadmore_get_posts' );
+add_action( 'wp_ajax_nopriv_loadmore', 'loadmore_get_posts' );
+
+add_filter( 'wpcf7_autop_or_not', '__return_false' );

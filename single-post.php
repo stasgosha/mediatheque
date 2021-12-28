@@ -3,9 +3,8 @@ get_header();
 while ( have_posts() ) {
 	the_post();
 	?>
-    <div class="container container-l">
-	    <?php yoast_breadcrumb( '<div class="breadcrumbs">', '</div>' ); ?>
-    </div>
+
+	<?php yoast_breadcrumb( '<div class="breadcrumbs">', '</div>' ); ?>
 
 	<div class="container container-l single-article-wrap mobile-padd-0 content-wrap">
 		<div class="custom-row">
@@ -14,12 +13,6 @@ while ( have_posts() ) {
 				<h1 class="entry-title">
 					<?php the_title(); ?>
 				</h1>
-
-				<div class="entry-info">
-					<strong><?php echo get_the_date('d.m.y');?></strong> /
-					<?php echo get_field('author');?>
-				</div>
-
 				<?php the_content(); ?>
 
 				<div class="bg-img hide-desktop">
@@ -27,7 +20,7 @@ while ( have_posts() ) {
 				</div>
 			</div>
 			<div class="col4 sidebar">
-				<?php get_template_part( 'partials/related', 'articles' ); ?>
+				<?php get_template_part( 'partials/related', 'post' ); ?>
 			</div>
 		</div>
 

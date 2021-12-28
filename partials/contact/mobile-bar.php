@@ -18,7 +18,7 @@ $whatsapp = get_field( 'whatsapp', 'option' );
         </li>
 
         <li>
-            <a href="mailto:<?php echo $phone; ?>">
+            <a href="tel:<?php echo $phone; ?>">
                 <span class="icon meditech-phone"></span>
                 <span class="text">
                     <?php _e( 'טלפון קופות', 'ystheme' ); ?>
@@ -27,7 +27,7 @@ $whatsapp = get_field( 'whatsapp', 'option' );
         </li>
 
         <li>
-            <a href="tel:<?php echo $mail; ?>">
+            <a href="mailto:<?php echo $mail; ?>">
                 <span class="icon meditech-mail"></span>
                 <span class="text">
                     <?php _e( 'שלחו לנו מייל', 'ystheme' ); ?>

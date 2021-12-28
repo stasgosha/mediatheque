@@ -10,11 +10,9 @@
         <div class="entry-body">
             <?php
             wp_nav_menu( array( 'theme_location' => 'mobile-menu' ) );
-            render_btn( __( 'לרכישת כרטיסים', 'ystheme' ), 'buy-now-btn' );
             ?>
-
-
         </div>
-        <?php echo print_svg( THEME_URI . '/images/mobile-menu-bg.svg' ); ?>
     </div>
+
+    <button class="mobile-nav-bottom-btn buy-now-btn">רכישת כרטיסים</button>
 </div>

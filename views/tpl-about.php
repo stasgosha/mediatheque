@@ -8,40 +8,63 @@ get_header(); ?>
 		<div class="container container-l">
 			<div class="section-inner">
 				<div class="section-content content-wrap">
-					<p>הקמת המוזיאון הישראלי לקריקטורה ולקומיקס הינה הגשמת חלום עבור קהילת הקריקטוריסטים והקומיקסאים בישראל. המוזיאון נותן מענה לעשרות אלפי חובבי המדיום, שזוכים כאן למסגרת קבועה של פעילות ענפה בתחום.</p>
-					<p>המוזיאון חושף את המבקרים לאמנות הקריקטורה על רבדיה, הקשריה ואיכויותיה, במטרה לקדם את ההבנה  וההכרה בקיומה ונחיצותה של הקריקטורה ככלי ביקורתי בחברה ואת הקומיקס כסוגה ספרותית בעלת עומק.</p>
+                    <?php the_content(); ?>
 
-					<blockquote>המוזיאון מעודד מחקר בנושא הקריקטורה בישראל כמשקפת ומבקרת את הלוך  הרוח המקומי. </blockquote>
-
-					<p><a href="#">בארכיון המוזיאון</a> עשרות אלפי יצירות מקוריות, קטעי עיתונות וספרים הודות למסירותם ונדיבותם של עשרות תורמים. אוספים שהיו מפעל חיים ואוספים שהיו תחביב משני – הם היום חלק מאוסף הארכיון, פיזי או דיגיטלי,  שמור ומאורגן בהתאם לסטנדרטים הגבוהים של מוזיאונים לאמנות.</p>
-					<p>כיום, המוזיאון הוא חלק ממתחם תרבות יוצר, מדיטק חולון, הכולל את מוזיאון העיצוב, סינמטק חולון, תיאטרון המדיטק, ספריית החומרים, המרכז לאמנות דיגיטלית ואת הספרייה המרכזית. </p>
+					<div class="mobile-visible">
+						<div class="section-slider">
+							<div class="swiper-container images-slider">
+								<div class="button-next">
+									<span class="meditech-chevron-left-alt"></span>
+								</div>
+								<div class="button-prev">
+									<span class="meditech-chevron-right-alt"></span>
+								</div>
+								<div class="swiper-wrapper">
+							                            <?php $slider=get_field('gallery');
+							                            if($slider){
+							                                foreach ($slider as  $value){?>
+							                                    <div class="swiper-slide">
+							                                        <img width="792" height="455" src="<?php print_R($value['url']);?>" class="attachment-full size-full" alt="" />
+							                                    </div>
+							                                <?php } } ?>
+								</div>
+							</div>
+							<div class="swiper-container thumbs-slider">
+								<div class="swiper-wrapper">
+							                            <?php $slider=get_field('gallery');
+							                            if($slider){
+							                                foreach ($slider as  $value){?>
+							                                    <div class="swiper-slide">
+							                                        <img  width="300" height="172"  src="<?php print_R($value['sizes']['search-result-item']);?>" class="attachment-full size-medium" alt="" />
+							                                    </div>
+							                                <?php } } ?>
+								</div>
+							</div>
+						</div>
+					</div>
 
 					<hr>
-
-					<h3>שעות פתיחת המוזיאון</h3>
-					<p>ימים ב' ,ד': 10:00 - 13:00 <br>ימים ג', ה': 17:00 - 20:00 <br>יום שבת: 10:00 - 15:00 <br>ימים א', ו': המוזיאון סגור</p>
-
-					<hr>
-
-					<h3>קישורים שימושיים</h3>
+					
+					<?php echo get_field('contact_text');?>
+					
+					<h2><?php echo get_field('links_title');?></h2>
 
 					<div class="links-list">
-						<a href="#" class="entry-link icon-link">
-							<span class="icon meditech-chevron-left"></span>
-							<span class="text">
-								לתיאום קבוצות וסיורים
+                        <?php if( have_rows('links') ): ?>
+                            <?php
+                            $i=0;
+                            while( have_rows('links') ): the_row(); ?>
+                                <a href="<?php echo get_sub_field('link');?>" class="entry-link icon-link">
+                                    <span class="icon meditech-chevron-left"></span>
+                                    <span class="text">
+								<?php echo get_sub_field('text');?>
 							</span>
-						</a>
-
-						<a href="#" class="entry-link icon-link">
-							<span class="icon meditech-chevron-left"></span>
-							<span class="text">
-								ערוץ היוטיוב של המוזיאון
-							</span>
-						</a>
+                                </a>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
 					</div>
 				</div>
-				<div class="section-slider">
+				<div class="section-slider mobile-hidden">
 					<div class="swiper-container images-slider">
 						<div class="button-next">
 							<span class="meditech-chevron-left-alt"></span>
@@ -81,7 +104,7 @@ get_header(); ?>
 		<div class="container container-sm">
 			<div class="title-wrap">
 				<h2 class="entry-title text-center">
-					<?php echo get_field('faq_title');?>>
+					<?php echo get_field('faq_title');?>
 				</h2>
 			</div>
 			<div class="qa-wrap">

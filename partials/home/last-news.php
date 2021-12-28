@@ -49,26 +49,26 @@
 				<div class="section-caption">
 					<!-- Cartoon corner -->
 					<h2 class="sc-title"><?php echo get_field('news_title_slider');?></h2>
+				</div>
 
-					<div class="cartoon-slider">
-                        <?php if( have_rows('news_slider') ): ?>
-                            <?php
-                            $i=0;
-                            while( have_rows('news_slider') ): the_row(); ?>
-                                <div class="slide">
-                                    <div class="cartoon-card">
-                                        <div class="card-image">
-                                            <img src="<?php echo get_sub_field('image')['url'];?>" alt="<?php echo get_sub_field('image')['alt'];?>">
-                                        </div>
-                                        <div class="card-text">
-                                            <p><?php echo get_sub_field('text');?></p>
-                                        </div>
+                <div class="cartoon-slider">
+                    <?php if( have_rows('news_slider') ): ?>
+                        <?php
+                        $i=0;
+                        while( have_rows('news_slider') ): the_row(); ?>
+                            <div class="slide">
+                                <div class="cartoon-card">
+                                    <div class="card-image">
+                                        <img src="<?php echo get_sub_field('image')['url'];?>" alt="<?php echo get_sub_field('image')['alt'];?>">
+                                    </div>
+                                    <div class="card-text">
+                                        <p><?php echo get_sub_field('text');?></p>
                                     </div>
                                 </div>
-                            <?php endwhile; ?>
-                        <?php endif; ?>
-					</div>
-				</div>
+                            </div>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                </div>
 			</div>
 		</div>
 	</div>

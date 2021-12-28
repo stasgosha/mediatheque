@@ -1,3 +1,29 @@
+$font1: 'Almoni';
+$second-font: 'Anomalia';
+$orange: #DF561B;
+$blue: #0348F4;
+$turquoise: #00B0CD;
+$green: #A1D39B;
+$yellow: #FFC400;
+$main_color: #444;
+$main_bg: #fff;
+$blue_bg: #074D5F;
+$light_blue: #E6EDFE;
+$light_blue2: #C0D3FF;
+$pink: #FDC4C0;
+$red: #E73B47;
+$dark_green: #003F31;
+$dark_gray: #222;
+$dark_purple: #8331F9;
+$light_purple: #D6B6FF;
+
+$text-color: #444;
+$text-dark: #222;
+
+$t: .3s;
+
+$primary: $blue;
+$accent: $turquoise;
 .btn {
 	appearance: none;
 	background: $primary;
@@ -61,7 +87,7 @@
 }
 
 .sticky-btn{
-	position: fixed;
+	position: relative;
 	left: 60px;
 	bottom: 60px;
 	display: block;
@@ -80,7 +106,7 @@
 	border-radius: 0;
 	box-shadow: none;
 	border: 0;
-	z-index: 90;
+	z-index: 120;
 
 	@media screen and (max-width: 991px){
 		left: 15px;
@@ -89,5 +115,9 @@
 		height: 60px;
 		padding: 6px 0 18px;
 		font-size: 16px;
+
+		.page-template-tpl-contact &{
+			bottom: 95px;
+		}
 	}
 }

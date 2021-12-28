@@ -22,16 +22,16 @@ global $row_time;
             $thumb_url = wp_get_attachment_image_src($thumb_id,'search-result', true);
             $image_alt = get_post_meta( $thumb_id, '_wp_attachment_image_alt', true);
             ?>
-			<svg viewBox="0 0 185 245" preserveAspectRatio="xMidYMid slice">
+			<svg viewBox="0 0 186 256">
                 <defs>
-                    <mask id="event-card-image-mask" width="185" height="245">
-                        <path fill="#fff" d="M9.63 244.52l165.74-21c5.32 0 9.63-4.3 9.63-9.62V9.62c0-5.3-4.31-9.61-9.63-9.61H9.63A9.63 9.63 0 000 9.61v225.3c0 5.3 4.31 9.61 9.63 9.61z"></path>
+                    <mask id="event-card-image-mask" width="186" height="256">
+                        <path fill="#fff" d="M9.7 255.5l165.7-21c5.3 0 9.6-4.3 9.6-9.6V9.6c0-5.3-4.3-9.6-9.6-9.6H9.7A9.6 9.6 0 000 9.6V246c0 5.3 4.4 9.6 9.7 9.6z"></path>
                     </mask>
                 </defs>
-                <image width="185" xlink:href="<?php echo $thumb_url[0]; ?>" mask="url(#event-card-image-mask)"></image>
+                <image width="186" height="256" xlink:href="<?php echo $thumb_url[0]; ?>" mask="url(#event-card-image-mask)" preserveAspectRatio="xMidYMid slice"></image>
             </svg>
 		</div>
-		<a href="<?php the_permalink(); ?>" class="card-button">למידע נוסף</a>
+		<a href="<?php the_permalink(); ?>" class="card-button">מידע נוסף</a>
 	</div>
 </div>
 

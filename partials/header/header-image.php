@@ -21,7 +21,7 @@ if ( is_tax() ) {
 }
 
 
-if ( ! is_singular( 'mt_article' ) ) :
+if ( ! is_singular( 'mt_article' ) and ! is_singular( 'post' ) ) :
 	?>
 
 <!-- <div class="header-image <?php echo $color; ?>">

@@ -73,7 +73,7 @@ get_header(); ?>
 									<use xlink:href="<?= get_template_directory_uri() ?>/images/icons-sprite.svg#clock"></use>
 								</svg>
 								<div class="item-text">
-									<strong>משך זמן פעילות:</strong> שעתיים
+									<strong>משך זמן פעילות:</strong>&nbsp;שעתיים  
 								</div>
 							</li>
 							<li>

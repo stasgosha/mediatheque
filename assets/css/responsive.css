@@ -327,13 +327,13 @@ body.tax-event_cat .wp-block-columns .entry-activity img {
   }
   .side-menu-wrap .entry-header {
     padding: 15px 23px;
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
   }
   .side-menu-wrap .hidden-fields a {
     margin: 27px 0 40px;
   }
   .side-menu-wrap .date-picker-wrap {
-    margin: 20px 0;
+    margin: 0px 0;
   }
   .side-menu-wrap .buy-now-date-picker {
     font-size: 17px;
@@ -472,6 +472,8 @@ body.tax-event_cat .wp-block-columns .entry-activity img {
     padding: 0 20px;
   }
   .header-search button {
+    width: 30px;
+    height: 30px;
     font-size: 20px;
     color: #074D5F;
   }

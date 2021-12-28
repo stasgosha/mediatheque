@@ -161,4 +161,13 @@
 			font-size: 17px;
 		}
 	}
+
+	@media screen and (max-width: 374px){
+		grid-template-columns: 1fr 128px;
+
+		.card-button{
+			width: 100%;
+			font-size: 13px;
+		}
+	}
 }

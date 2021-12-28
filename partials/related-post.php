@@ -1,10 +1,10 @@
 <?php
-$title = get_field( 'single_article_related_title', 'option' );
-$cat   = wp_get_post_terms( $post->ID, array( 'article_cat' ) );
+$title = get_field( 'single_post_related_title', 'option' );
+$cat   = wp_get_post_terms( $post->ID, array( 'category' ) );
 
 
 $args = array(
-    'post_type'      => array( 'mt_article' ),
+    'post_type'      => array( 'post' ),
     'posts_per_page' => 3,
     'post__not_in'   => array( get_the_ID() ),
 );
@@ -27,7 +27,7 @@ switch ( $posts_query ) {
     case 'by_cat' :
         $args['tax_query'] = array(
             array(
-                'taxonomy' => 'article_cat',
+                'taxonomy' => 'category',
                 'terms'    => ! empty( $cat ) ? $cat[0]->term_id : '',
             ),
 
@@ -52,16 +52,16 @@ if ( $query->have_posts() ) :
             </div>
 
         <?php endif; ?>
-    
-    <div class="slider-articles">
+
+
         <?php
         while ( $query->have_posts() ) {
-            $query->the_post();
-            get_template_part( 'partials/loop', 'article' );
-        }
-        wp_reset_postdata();
-        ?>
-    </div>
+        $query->the_post();
+        get_template_part( 'partials/loop', 'article' );
+    }
+    wp_reset_postdata();
+    ?>
+
 
 </div>
 <?php

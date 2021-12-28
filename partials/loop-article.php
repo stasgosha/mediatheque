@@ -13,7 +13,7 @@
             </a>
 
             <div class="entry-meta">
-                <?php echo get_the_date('d.m.y');?> <?php if(get_field('author')){ ?> /<?php } ?>  <?php echo get_field('author');?>
+                <strong><?php echo get_the_date('d.m.y');?></strong> <?php if(get_field('author')){ ?> /<?php } ?>  <?php echo get_field('author');?>
             </div>
 
 			<p class="entry-excerpt">

@@ -6,7 +6,7 @@
 
 			<div class="wrap">
 				<h2 class="entry-subtitle">
-					<?php _e( 'אופס... הדף שחיפשתם לא נמצא!', 'ystheme' ); ?>
+					<?php _e( 'אופס&hellip; הדף שחיפשתם לא נמצא!!!', 'ystheme' ); ?>
 				</h2>
 				<a href="<?php echo home_url(); ?>" class="entry-link icon-link">
 					<span class="icon meditech-chevron-left"></span>
@@ -18,6 +18,9 @@
 		</div>
 
 	</div>
+    
+    <?php get_template_part( 'partials/home/banner' ); ?>
+    
 </div>
 <?php
 get_footer();

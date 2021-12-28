@@ -15,13 +15,17 @@ $months  = get_months();
 $num     = gmdate( 'm', strtotime( $current ) );
 
 ?>
+<section class="before-events-calendar">
+	<div class="container">
+		<div class="section-top-text">
+			<?php the_content(); ?>
+		</div>
+	</div>
+</section>
 <section class="section events-calendar toggle-white-bg">
-	<div class="container container-l">
+	<div class="container">
 		<div class="custom-row">
 			<div class="col12">
-				<div class="section-top-text">
-					<?php the_content(); ?>
-				</div>
 				<div class="header-wrap">
 					<div class="days-slider swiper-container">
 						<div class="days-slider-wrapper">

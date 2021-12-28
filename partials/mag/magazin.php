@@ -2,6 +2,7 @@
 if ( ! post_type_exists( 'mt_article' ) ) {
     return;
 }
+$id=get_the_ID();
 $text     = get_field( 'text' );
 $posts    = get_field( 'mag_posts' );
 $featured = get_field( 'mag_featured_post' );
@@ -18,7 +19,7 @@ $args = array(
             <?php echo $text; ?>
         </div>
     <?php endif; ?>
-    <div class="container container-l">
+    <div class="container container-l padd-0 first">
         <div class="custom-row featured-row">
 <!--            <div class="col6 mag-featured">-->
 <!--                --><?php
@@ -54,11 +55,11 @@ $args = array(
           </div>
     </div>
     <div class="container container-l padd-0">
-      <div class="custom-row row-posts grid-3">
+      <div class="custom-row row-posts grid-3" id="row_shop">
           <?php
-          $posts[]                = $featured;
+          global $wp_query;
           $args['post__not_in']   = $posts;
-          $args['posts_per_page'] = 50;
+          $args['posts_per_page'] = 20;
           unset( $args['post__in'] );
           $query = new WP_Query( $args );
           if ( $query->have_posts() ) {
@@ -70,5 +71,12 @@ $args = array(
           }
           ?>
       </div>
+        <?php if ($query->max_num_pages > 1) : ?>
+            <script id="loadmore">
+                var ajaxurl = '<?php echo site_url() ?>/wp-admin/admin-ajax.php';
+                var posts_vars = '<?php echo $id; ?>';
+                var current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
+            </script>
+        <?php endif; ?>
     </div>
 </section>

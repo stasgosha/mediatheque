@@ -1,5 +1,5 @@
 .shop-page-section{
-	padding: 50px 0 110px;
+	padding: 0 0 110px;
 
 	.section-top{
 		padding-bottom: 50px;
@@ -12,6 +12,27 @@
 			&:focus{
 				text-decoration: none;
 			}
+		}
+
+		@media screen and (max-width: 767px){
+			text-align: right !important;
+			padding-bottom: 27px;
+			font-size: 19px;
+			line-height: 24px;
+
+			p{
+				margin-bottom: 15px;
+
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.container.container-md{
+		@media screen and (min-width: 1440px){
+			max-width: 1390px !important;
 		}
 	}
 }
@@ -90,6 +111,9 @@
 
 			.btn{
 				min-width: 140px;
+				min-height: 35px;
+				height: 35px;
+				font-size: 17px;
 			}
 		}
 	}
@@ -99,15 +123,18 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	width: 100px;
-	height: 38px;
+	width: var(--width);
+	height: var(--height);
 	border: 1px solid $primary;
 	border-radius: 6px;
 	justify-content: center;
-	margin-right: 9px;
+	margin-right: 6px;
+
+	--height: 38px;
+	--width: 100px;
 
 	input{
-		height: 36px;
+		height: calc(var(--height) - 2px);
 		width: 40px;
 		appearance: none;
 		border: 0;
@@ -120,7 +147,7 @@
 
 	button{
 		width: 22px;
-		height: 36px;
+		height: calc(var(--height) - 2px);
 		appearance: none;
 		background: transparent;
 		box-shadow: none;
@@ -129,5 +156,10 @@
 		font-weight: 400;
 		font-family: $second-font;
 		color: $primary;
+	}
+
+	@media screen and (max-width: 767px){
+		--height: 32px;
+		--width: 90px;
 	}
 }

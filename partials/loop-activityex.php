@@ -45,7 +45,7 @@ global $row_time;
                 <image width="185" xlink:href="<?php echo $thumb_url[0]; ?>" mask="url(#event-card-image-mask)"></image>
             </svg>
 		</div>
-		<a href="<?php the_permalink(); ?>" class="card-button">למידע נוסף</a>
+		<a href="<?php the_permalink(); ?>" class="card-button">מידע נוסף</a>
 	</div>
 </div>
 

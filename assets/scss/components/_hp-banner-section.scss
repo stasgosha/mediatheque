@@ -1,5 +1,5 @@
 .hp-banner-section{
-	padding-bottom: 8.2292vw;
+	padding-bottom: 158px;
 
 	@media screen and (max-width: 767px){
 		padding: 0 15px 86px;
@@ -7,6 +7,8 @@
 }
 
 .hp-banner-slider{
+	margin-bottom: 0 !important;
+
 	.slick-dots{
 		bottom: -80px !important;
 
@@ -44,7 +46,7 @@
 		}
 
 		@media screen and (max-width: 767px){
-			bottom: -55px !important;
+			bottom: -45px !important;
 			text-align: right;
 			margin-right: 10px;
 
@@ -81,7 +83,7 @@
 	}
 
 	.card-image{
-		width: calc(100% - 43.6458vw + 2.8125vw);
+		width: 59.0625vw;
 		margin-right: -2.8125vw;
 
 		svg{
@@ -102,21 +104,21 @@
 	}
 
 	.card-category{
-		margin-bottom: 0.9375vw;
+		margin-bottom: 0.4167vw;
 	}
 
 	.card-caption{
 		font-size: 3.3333vw;
 		line-height: 1;
 		font-weight: bold;
-		margin-bottom: 0.9375vw;
+		margin-bottom: 0.7813vw;
 		color: inherit;
 	}
 
 	.card-text{
 		padding-bottom: 1.5104vw;
 		position: relative;
-		margin-bottom: 1.1458vw;
+		margin-bottom: 0.9896vw;
 
 		&:after{
 			content: '';
@@ -211,6 +213,11 @@
 			font-size: 20px;
 			line-height: 1.5;
 			padding-bottom: 12px;
+
+			&:after{
+				width: 93px;
+				height: 5px;
+			}
 		}
 
 		.card-date{

@@ -18,6 +18,8 @@ $query = new WP_Query( $args );
 if ( $query->have_posts() ) :
 ?>
 
+<div id="form">
+</div>
 <form class="buy-now-form buy-form">
 
     <select class="event-select" name="">
@@ -63,6 +65,8 @@ if ( $query->have_posts() ) :
 
 
 </form>
+
+
 <?php else : ?>
 <p class="no-events">
     <?php _e( 'אין אירועים קרובים', 'ystheme' ); ?>

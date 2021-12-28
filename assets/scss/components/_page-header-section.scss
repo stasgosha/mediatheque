@@ -8,6 +8,15 @@
 	background-position: left center;
 	color: #fff;
 
+	.search &{
+		display: none;
+	}
+
+	.breadcrumbs{
+		font-size: 21px;
+		line-height: 30px;
+	}
+
 	.page-template-tpl-exhibition &,
 	.single-mt_exhibition &{
 		display: none;
@@ -36,7 +45,7 @@
 		font-size: 54px;
 		font-family: $second-font;
 		font-weight: bold;
-		margin-top: 21px;
+		margin-top: 9px;
 		line-height: 1.1;
 		color: inherit;
 		margin-bottom: 0;
@@ -44,7 +53,7 @@
 
 	@media screen and (max-width: 991px){
 		min-height: 120px;
-		padding: 20px 0;
+		padding: 24px 0;
 		margin-bottom: 45px;
 
 		&:after{
@@ -54,9 +63,20 @@
 			bottom: -30px;
 		}
 
+		.breadcrumbs{
+			font-size: 17px;
+		}
+
 		.page-caption{
 			font-size: 34px;
-			margin-top: 4px;
+			margin-top: 2px;
+			line-height: 1;
+		}
+	}
+
+	@media screen and (max-width: 374px){
+		.page-caption{
+			font-size: 28px;
 		}
 	}
 }

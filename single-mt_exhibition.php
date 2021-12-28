@@ -38,11 +38,11 @@ get_header(); ?>
                 </div>
                 <div class="section-content">
                     <!-- Вывод через условие -->
-                    <?php if(get_field('show_exhibition_information')){ ?>
-                    <div class="section-info">
-                        <ul class="info-list">
+                    <!-- <?php if(get_field('show_exhibition_information')){ ?> -->
+                    <!-- <div class="section-info">
+                        <ul class="info-list"> -->
                             <!-- Выводится когда событие уже прошло -->
-                            <?php
+                            <!-- <?php
 
                             $currentdate = date('H:i d/m/Y');
                             $date = get_field('date', false, false);
@@ -53,31 +53,36 @@ get_header(); ?>
                             if (strtotime("now") > strtotime($date_post2)) {
 
                                 ?>
-                            <li class="red">
-                                <svg class="item-icon">
-                                    <use xlink:href="<?= get_template_directory_uri() ?>/images/icons-sprite.svg#calendar"></use>
-                                </svg>
-                                <div class="item-text">
-                                    <strong>הפעילות הסתיימה</strong>
-                                </div>
-                            </li>
-                            <?php }else{ ?>
-
-                                <li>
+                                <li class="red">
                                     <svg class="item-icon">
-                                        <use xlink:href="<?= get_template_directory_uri() ?>/images/icons-sprite.svg#tick"></use>
+                                        <use xlink:href="<?= get_template_directory_uri() ?>/images/icons-sprite.svg#calendar"></use>
                                     </svg>
                                     <div class="item-text">
-                                        <strong>פעילות מאושרת סל תרבות</strong>
+                                        <strong>הפעילות הסתיימה</strong>
                                     </div>
                                 </li>
+                            <?php }else{ ?>
+
+
                             <?php } ?>
 
+
+
+
+                            <li>
+                                <svg class="item-icon">
+                                    <use xlink:href="<?= get_template_directory_uri() ?>/images/icons-sprite.svg#tick"></use>
+                                </svg>
+                                <div class="item-text">
+                                    <strong>פעילות מאושרת סל תרבות</strong>
+                                </div>
+                            </li>
                         </ul>
 
                         <hr>
 
                         <ul class="info-list">
+                            <?php if(get_field('date', false, false)){ ?>
                             <li>
                                 <svg class="item-icon">
                                     <use xlink:href="<?= get_template_directory_uri() ?>/images/icons-sprite.svg#calendar"></use>
@@ -91,14 +96,17 @@ get_header(); ?>
 
                                 </div>
                             </li>
+                            <?php } ?>
+                            <?php if(get_field('duration')){ ?>
                             <li>
                                 <svg class="item-icon">
                                     <use xlink:href="<?= get_template_directory_uri() ?>/images/icons-sprite.svg#clock"></use>
                                 </svg>
                                 <div class="item-text">
-                                    <strong>משך זמן פעילות:</strong><?php echo get_field('duration');?>
+                                    <strong>משך זמן פעילות: </strong><?php echo get_field('duration');?>
                                 </div>
                             </li>
+                            <?php } ?>
                             <li>
                                 <svg class="item-icon">
                                     <use xlink:href="<?= get_template_directory_uri() ?>/images/icons-sprite.svg#age"></use>
@@ -119,12 +127,12 @@ get_header(); ?>
                         <?php   if (strtotime("now") < strtotime($date_post2)) {?>
                             <div class="info-footer">
 
-                                <a href="#" class="buy-now-btn btn yellow">רכישת כרטיסים</a>
+                                <a href="#" class="buy-now-btn btn yellow" data-target="#buy-now">רכישת כרטיסים</a>
                             </div>
                         <?php }    ?>
 
-                    </div>
-                    <?php } ?>
+                    </div> -->
+                    <!-- <?php } ?> -->
                     <div class="content-wrap">
                        <?php the_content(); ?>
                         <?php if( have_rows('links') ): ?>
@@ -181,7 +189,7 @@ get_header(); ?>
                             <p><?php echo get_field('text_gallery');?></p>
                         </div>
 
-                        <a href="#" class="buy-now-btn btn yellow"> <?php echo get_field('gallery_text_button');?></a>
+                        <a href="#" class="buy-now-btn btn yellow" data-target="#book-tour"> <?php if (get_field('gallery_text_button')) { echo get_field('gallery_text_button'); } else { ?> הזמינו עכשיו <?php } ?></a>
                     </div>
                     <?php } ?>
                 </div>

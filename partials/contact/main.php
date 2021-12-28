@@ -18,8 +18,8 @@ $waze          = get_field( 'waze' );
 ?>
 <section class="contact-main-wrap">
     <div class="container container-l">
-        <div class="custom-row">
-            <div class="col8">
+        <div class="section-inner">
+            <div class="section-content">
                 <h4 class="entry-subtitle">
                     דברו איתנו
                 </h4>
@@ -31,114 +31,28 @@ $waze          = get_field( 'waze' );
                 <hr>
 
                 <div class="d-flex">
+                    <?php if( have_rows('contacts') ): ?>
+                        <?php
+                        $i=0;
+                        while( have_rows('contacts') ): the_row(); ?>
+                            <div class="wrap">
+                                <h4 class="entry-subtitle">
+                                    <?php echo get_sub_field('title_contact');?>
+                                </h4>
 
-
-                    <?php if ( $kupot ) : ?>
-                        <div class="wrap">
-                            <h4 class="entry-subtitle">
-                                <?php echo $kupot['title']; ?>
-                            </h4>
-
-                            <ul>
-                                <li>
-										<span class="text">
-											<?php echo $kupot['address']; ?>
-										</span>
-                                </li>
-                                <li>
-										<span class="text">
-											<?php _e( 'טלפון: ', 'ystheme' ); ?>
-										</span>
-                                    <a href="tel:<?php echo $kupot['phone']; ?>">
-                                        <?php echo $kupot['phone']; ?>
-                                    </a>
-                                </li>
-
-                                <?php if ( $kupot['fax'] ) : ?>
-
-                                    <li>
-											<span class="text">
-												<?php _e( 'פקס: ', 'ystheme' ); ?>
-											</span>
-                                        <a href="#">
-                                            <?php echo $kupot['fax']; ?>
-                                        </a>
-                                    </li>
-
-                                <?php endif; ?>
-                            </ul>
-                        </div>
-
-
-                    <?php endif; ?>
-
-                    <?php if ( $mazkirut ) : ?>
-                        <div class="wrap">
-                            <h4 class="entry-subtitle">
-                                <?php echo $mazkirut['title']; ?>
-                            </h4>
-
-                            <ul>
-                                <li>
-										<span class="text">
-											<?php _e( 'טלפון: ', 'ystheme' ); ?>
-										</span>
-                                    <a href="tel:<?php echo $mazkirut['phone']; ?>">
-                                        <?php echo $mazkirut['phone']; ?>
-                                    </a>
-                                </li>
-
-                                <?php if ( $mazkirut['fax'] ) : ?>
-
-                                    <li>
-											<span class="text">
-												<?php _e( 'פקס: ', 'ystheme' ); ?>
-											</span>
-                                        <a href="#">
-                                            <?php echo $mazkirut['fax']; ?>
-                                        </a>
-                                    </li>
-
-                                <?php endif; ?>
-                            </ul>
-                        </div>
-
-
-                    <?php endif; ?>
-
-
-                    <?php if ( $hug ) : ?>
-                        <div class="wrap">
-                            <h4 class="entry-subtitle">
-                                <?php echo $hug['title']; ?>
-                            </h4>
-
-                            <ul>
-                                <li>
-										<span class="text">
-											<?php _e( 'טלפון: ', 'ystheme' ); ?>
-										</span>
-                                    <a href="tel:<?php echo $hug['phone']; ?>">
-                                        <?php echo $hug['phone_text']; ?>
-                                    </a>
-                                </li>
-
-                                <?php if ( $hug['fax'] ) : ?>
-
-                                    <li>
-											<span class="text">
-												<?php _e( 'פקס: ', 'ystheme' ); ?>
-											</span>
-                                        <a href="#">
-                                            <?php echo $hug['fax']; ?>
-                                        </a>
-                                    </li>
-
-                                <?php endif; ?>
-                            </ul>
-                        </div>
-
-
+                                <ul>
+                                    <?php if( get_sub_field('points') ): ?>
+                                        <?php while( has_sub_field('points') ): ?>
+                                            <li>
+                                                <span class="text">
+                                                  <?php echo get_sub_field('contact');?>
+                                                </span>
+                                            </li>
+                                        <?php endwhile; ?>
+                                    <?php endif; ?>
+                                </ul>
+                            </div>
+                        <?php endwhile; ?>
                     <?php endif; ?>
 
 
@@ -182,7 +96,7 @@ $waze          = get_field( 'waze' );
                 </div>
 
             </div>
-            <div class="col4 hide-mobile">
+            <div class="section-sidebar hide-mobile">
 
                 <?php if ( $sidebar_title ) : ?>
                     <h2 class="entry-title">

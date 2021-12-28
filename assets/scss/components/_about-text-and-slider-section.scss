@@ -1,5 +1,5 @@
 .about-text-and-slider-section{
-	padding: 100px 0;
+	padding: 0 0 100px;
 
 	.section-inner{
 		display: grid;
@@ -18,5 +18,27 @@
 	.links-list{
 		display: grid;
 		grid-gap: 12px;
+	}
+
+	@media screen and (max-width: 767px){
+		padding-top: 20px;
+	}
+
+	@media screen and (max-width: 991px){
+		.section-slider{
+			padding: 0 15px;
+		}
+	}
+
+	.mobile-visible{
+		@media screen and (min-width: 992px){
+			display: none !important;
+		}
+	}
+
+	.mobile-hidden{
+		@media screen and (max-width: 991px){
+			display: none !important;
+		}
 	}
 }

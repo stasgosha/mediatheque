@@ -27,6 +27,9 @@ if ( $featured ) :
 
                             <a href="<?php echo get_sub_field('link');?>" class="card-btn">
                                 <span class="btn-text"><?php echo get_sub_field('text_button');?></span>
+                                <svg class="btn-icon">
+                                    <use xlink:href="<?= get_template_directory_uri() ?>/images/icons-sprite.svg#arrow-left"></use>
+                                </svg>
                             </a>
                         </div>
                         <div class="card-image">

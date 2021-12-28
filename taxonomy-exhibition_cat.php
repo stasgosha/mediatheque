@@ -6,7 +6,7 @@
 		if ( have_posts() ) {
 			while ( have_posts() ) {
 				the_post();
-				get_template_part( 'partials/loop', 'post' );
+				get_template_part( 'partials/loop', 'exhibition' );
 			}
 		} else {
 			esc_html_e( 'Sorry, no posts found.', 'ystheme' );
